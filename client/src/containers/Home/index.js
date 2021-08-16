@@ -1,374 +1,433 @@
 import React, { Component } from 'react';
+import './../../index.css';
 import {
   Container,
   Header,
-  Image,
-  Segment,
-  Grid,
   Button,
-  Divider,
-  Icon,
+  Grid,
+  Segment,
+  Image,
 } from 'semantic-ui-react';
-import './../../index.css';
-import logo from './../../components/Images/Logo.png';
-import { Link } from 'react-router-dom';
-import fanuel from './../../components/Images/fanuel.jpg';
-import pic1 from './../../components/Images/topgainers.png';
-import pic2 from './../../components/Images/watchlist.png';
-import pic3 from './../../components/Images/livefeed.png';
-import mobile from './../../components/Images/mobile.png' 
-import mobile2 from './../../components/Images/mobile2.png' 
-import mobile3 from './../../components/Images/mobile3.png' 
-import mobile5 from './../../components/Images/mobile5.png' 
+
+import pic from './../../components/Images/jbpic.png';
+import AosScroll from './../Aos';
+import 'aos/dist/aos.css';
+import stock2 from './../../components/Images/stock2.png';
+import s1 from './../../components/Images/s1.png';
+import s2 from './../../components/Images/s2.png';
+
+import stock from './../../components/Images/stockcanva.png';
+import AdminApp from './../../components/Images/adminApp.png';
+import weather from './../../components/Images/weatherpic.png';
+import Resume from './../../components/Images/fanuelResume.pdf';
 
 export default class Home extends Component {
   render() {
     return (
       <div>
-        <div className="background" >
-          <div className="info">
-            <Container>
-            
+      <div className="background">
+        <div className="info">
+          <Container fluid>
             <Grid divided="vertically">
-              <Grid.Row>
-                <Grid.Column width={10}>
-                <div className="j" style={{paddingTop:'50px',width:'80%'}}>
-                <Image
-                  style={{ backgroundColor: 'white' }}
-                  className="im"
-                  src={logo}
-                />
-              </div>
+              <Grid.Row columns={2}>
+                <Grid.Column width={3}></Grid.Column>
+                <Grid.Column width={13}>
+                  <h1
+                    className="name"
+                    style={{
+                      fontSize: '65px',
+                      lineHeight: '1.2',
+                      padding: '105px 0 0 0',
+                      fontWeight: '800',
+                      textAlign: 'left',
+                      margin: '0 0 12px 0',
+                    }}
+                  >
+                    FANUEL N. ALEM
+                  </h1>
 
-                <h1 className="node" style={{paddingTop:'20px'}}>
-                {' '}
-                Getting Started  on  your 10/10 stock tracker account{' '}
-              </h1>
-               <p className="description">
-                Add stocks to your watchList with the  10/10 stock tracking app
-                and become a smarter investor with our amazing tools.
-              </p>
-              <Link as={Link} to="/signup">
-                <button
-                  className="buttn"
-                  style={{ color: '#333', padding: '10px 16px' }}
-                >
-                  <Icon name="lightning"></Icon>Get Started on your own account
-                </button>
-              </Link>
-              <Link as={Link} to="/search-stock">
-                <Link as={Link} to="/searchstock">
-                  <Button onClick={this.props.onhomeclick} color="purple">
+                  <p
+                    className="pname"
+                    style={{
+                      margin: '0 0 0 0',
+                      color: '#473f4f',
+                      padding: '0 0 11px 0px',
+                    }}
+                  >
+                    FULL-STACK SOFTWARE ENGINEER
+                    <br></br>
+                  </p>
+                  <div className="style" style={{ textAlign: 'left' }}>
                     {' '}
-                    <Icon name="search"></Icon>
-                    <span className="buttn2"> Search Stocks</span>{' '}
-                  </Button>
-                </Link>
-              </Link>
-
-
+                    <a href="mailto:fanuelnalem@outlook.com">
+                      <button className="sendmeamessage">
+                        <span
+                          style={{
+                            fontSize: '18px',
+                            color: 'white',
+                            fontWeight: 'bold',
+                          }}
+                        >
+                          Connect With Me
+                        </span>{' '}
+                      </button>
+                    </a>
+                  </div>
                 </Grid.Column>
-                <Grid.Column width={6}>
- 
- 
- 
- <div style={{display:'flex',justifyContent:"center"}}>
-   
- <Image style={{width:'310px'}} src={mobile5} />
- </div>
- 
-                 </Grid.Column>
               </Grid.Row>
             </Grid>
-            </Container>
-           
-          
-          
-          </div>
-       
+          </Container>
         </div>
-        <div style={{height:'180px'}} className='extension'>
+      </div>
 
-</div>
-        <Segment style={{ padding: '6em 0em' }} vertical>
-          <Container>
-            <Grid>
-              <Grid.Row>
-                <Grid.Column width={5}>
-                  <div className="div-info">
-                    <Header
-                      textAlign="center"
-                      as="h3"
-                      style={{ fontSize: '2em' }}
-                    >
-                      View the top 10 stock Market daily winners and losers, and
-                      lookup any stock.
-                    </Header>
-                    <p style={{ fontSize: '1.33em', textAlign: 'center' }}>
-                      Open the winners or losers tab to check the daily stock
-                      market winners and losers. In the search bar, you can
-                      search stocks by their ticker to find extra information
-                      and details about the company.
+      <div style={{ backgroundColor: 'white', padding: '59px 0 100px 0' }}>
+        <Container className="bioo">
+          <Grid>
+            <Grid.Column width={7} style={{ padding: '95px 0 0 0' }}>
+              <Image
+                src={pic}
+                size="medium"
+                circular
+                verticalAlign="top"
+                style={{ margin: '0 0 0 0', padding: '0px 0 0 0' }}
+              />
+            </Grid.Column>
+            <Grid.Column width={9}>
+              <h2
+                style={{ textAlign: 'left', padding: '25px 0 0 0' }}
+                className="txt"
+              >
+                ABOUT
+              </h2>
+
+              <p
+                style={{
+                  textAlign: 'left',
+                  fontSize: '16px',
+                  fontWeight: '200',
+                }}
+                className="txt-2"
+              >
+                Hello, I'm a creative and super ambitious professional with a
+                vast array of knowledge in many different front end and back
+                end languages, responsive frameworks, databases, and best code
+                practices aimed at delivering expected and promised results. I
+                utilize unique strategies and approaches while working
+                tirelessly around the clock to provide a satisfying result. I
+                was formerly an account manager providing technical support
+                for clients and helping non-profits, charities, and churches
+                gain access to technology tools, and I quickly learned that
+                the demand for software developers is exceeding supply.
+              </p>
+              <p
+                style={{
+                  textAlign: 'left',
+                  fontSize: '16px',
+                  fontWeight: '200',
+                }}
+                className="txt-2"
+              >
+                My primary focus of study at San Francisco State University
+                was business administration, where I have been active in
+                collaborating with teams to build business applications from
+                the users end and working as a part time web developer. I have
+                established a profound knowledge in React, Node.js,
+                JavaScript, JQuery, MySQL, HTML, CSS3, Typescript, MongoDB and
+                cultivated strong working relationships with diverse employees
+                and types of clients.
+              </p>
+
+              <p
+                style={{
+                  textAlign: 'left',
+                  fontSize: '16px',
+                  fontWeight: '200',
+                  margin: '0 0 50px 0',
+                }}
+                className="txt-2"
+              >
+                Most Recently earned a certificate in full stack web
+                development from the University of California, Berkeley. known
+                as an innovative critical thinker that enjoys solving problems
+                and passionate about developing full stack applications. With
+                each project, my aim is to introduce efficient solutions to
+                users and engage my audience for an impactful user experience.
+                I’m excited to leverage my skills as part of a fast-paced,
+                quality-driven team to build better experiences on the web.
+              </p>
+
+              <a href={Resume} target="_blank" rel="noopener noreferrer">
+                <Button
+                  style={{ backgroundColor: '#8b5eb4', color: 'white' }}
+                  size="large"
+                >
+                  View my resume.
+                </Button>
+              </a>
+            </Grid.Column>
+          </Grid>
+        </Container>
+      </div>
+
+      <div className="tech">
+        <Segment style={{ padding: '10em 0em' }} vertical>
+          <Container text>
+            <Header
+              as="h3"
+              style={{
+                fontSize: '3.5em',
+                color: 'white',
+                fontFamily: "'Maven Pro', sans-serif",
+                fontWeight: '700',
+                letterSpacing: '5px',
+              }}
+            >
+              TECHNOLOGY
+            </Header>
+            <br></br>
+            <Grid divided="vertically">
+              <Grid.Row columns={6}>
+                <Grid.Column>
+                  <div className="About-icon-div">
+                    <i
+                      style={{ fontSize: '5.5rem', color: 'white' }}
+                      className="About-icon fab fa-html5"
+                    ></i>
+                    <p className="descrip" style={{ color: 'white' }}>
+                      HTML5
                     </p>
                   </div>
                 </Grid.Column>
-                <Grid.Column floated="right" width={10}>
-                  <Image
-                    style={{ borderRadius: '4px', height: '350px' }}
-                    src={pic1}
-                  />
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-
-            <br></br>
-            <br></br>
-            <br></br>
-
-            <Divider />
-
-            <br></br>
-            <br></br>
-            <br></br>
-
-            <Grid>
-              <Grid.Row>
-                <Grid.Column width={10}>
-                  <Image style={{ borderRadius: '4px' }} src={pic2} />
-                </Grid.Column>
-                <Grid.Column floated="right" width={5}>
-                  <div className="div-info2">
-                    <Header
-                      as="h3"
-                      textAlign="center"
-                      style={{ fontSize: '2em' }}
-                    >
-                      Create your personal stocks watchlist and join the 10/10
-                      stock community to view trends.
-                    </Header>
-                    <p style={{ fontSize: '1.33em', textAlign: 'center' }}>
-                      You can also enter stocks onto the watchlist to manage and
-                      keep track of your favorite stocks. The community tab will
-                      allow you to view popular stocks among other users.
+                <Grid.Column>
+                  <div className="About-icon-div">
+                    <i
+                      style={{ fontSize: '5.5rem', color: 'white' }}
+                      className="About-icon fab fa-css3-alt"
+                    ></i>
+                    <p className="descrip" style={{ color: 'white' }}>
+                      CSS3
                     </p>
                   </div>
                 </Grid.Column>
-              </Grid.Row>
-            </Grid>
-
-            <br></br>
-            <br></br>
-            <br></br>
-
-            <hr></hr>
-
-            <br></br>
-            <br></br>
-            <br></br>
-            <Grid>
-              <Grid.Row>
-                <Grid.Column width={5}>
-                  <div className="div-info">
-                    <Header
-                      textAlign="center"
-                      as="h3"
-                      style={{ fontSize: '2em' }}
-                    >
-                      Network with other Stock Investors
-                    </Header>
-                    <p style={{ fontSize: '1.33em', textAlign: 'center' }}>
-                      View a live feed where you can find active users and
-                      connect with them to grow your network and stay informed
-                      on trending stocks.
+                <Grid.Column>
+                  <div className="About-icon-div">
+                    <i
+                      style={{ fontSize: '5.5rem', color: 'white' }}
+                      className="About-icon fab fa-js"
+                    ></i>
+                    <p className="descrip" style={{ color: 'white' }}>
+                      JavaScript
                     </p>
                   </div>
                 </Grid.Column>
-                <Grid.Column floated="right" width={10}>
-                  <Image
-                    style={{ borderRadius: '4px', height: '350px' }}
-                    src={pic3}
-                  />
+                <Grid.Column>
+                  <div className="About-icon-div">
+                    <i
+                      style={{ fontSize: '5.5rem', color: 'white' }}
+                      className="About-icon fab fa-bootstrap"
+                    ></i>
+                    <p className="descrip" style={{ color: 'white' }}>
+                      Bootstrap
+                    </p>
+                  </div>
                 </Grid.Column>
-              </Grid.Row>
-              <Grid.Row>
-                <Grid.Column textAlign="center">
-                  <Link as={Link} to="/signup">
-                    <Button style={{ margin: '30px 0 0 0' }} color="purple">
-                      {' '}
-                      <Icon name="signup"></Icon>
-                      <span className="buttn2"> Register</span>{' '}
-                    </Button>
-                  </Link>
+                <Grid.Column>
+                  <div className="About-icon-div">
+                    <i
+                      style={{ fontSize: '5.5rem', color: 'white' }}
+                      className="About-icon fab fa-react"
+                    ></i>
+                    <p className="descrip" style={{ color: 'white' }}>
+                      React
+                    </p>
+                  </div>
+                </Grid.Column>
+
+                <Grid.Column>
+                  <div className="About-icon-div">
+                    <i
+                      style={{ fontSize: '5.5rem', color: 'white' }}
+                      className="About-icon fab fa-node"
+                    ></i>
+                    <p className="descrip" style={{ color: 'white' }}>
+                      Node.js
+                    </p>
+                  </div>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
           </Container>
         </Segment>
+      </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <Container text>
+        <Header
+          as="h3"
+          style={{
+            fontSize: '3.5em',
+            color: 'black',
+            fontFamily: "'Maven Pro', sans-serif",
+            fontWeight: '700',
+          }}
+        >
+          MY WORK
+        </Header>
+      </Container>
+      <AosScroll />
+      <div style={{ height: '80px' }}></div>
 
-        <div className="l">
-          <div style={{ padding: '6em 0em' }}>
-            <Container>
-              <Grid divided="vertically">
-                <Grid.Row columns={2}>
-                  <Grid.Column>
-                    <Header as="h3" style={{ fontSize: '2em' }}>
-                      How This simple app works
-                    </Header>
+      <Segment style={{ padding: '4em 0 6em 0em' }} vertical>
+        <div className="card-containers">
+          <div className="image-container">
+            
 
-                    <p
-                      className="how-it-works"
-                      style={{
-                        fontSize: '1.33em',
-                        fontFamily:
-                          '"Helvetica Neue",Helvetica,Arial,sans-serif',
-                      }}
-                    >
-                      Fully secure website with authentication and free to join.
-                      simply create your own personalized list of stocks that
-                      you can have in mind. If not, this app will provide
-                      everything you need to keep you competitvely informed, no
-                      matter your experience level.
-                    </p>
-                  </Grid.Column>
-                  <Grid.Column>
-                    <Header as="h3" style={{ fontSize: '2em' }}>
-                      Mission{' '}
-                    </Header>
-                    <p
-                      style={{
-                        fontSize: '1.33em',
-                        fontFamily:
-                          '"Helvetica Neue",Helvetica,Arial,sans-serif',
-                      }}
-                    >
-                      Our motivation when building this application was to
-                      empower investors with valuable information about the
-                      stock market, and to also create an engaging experience
-                      for people with any background. Our group focused on an
-                      intuitive design, vibrant colors, and convenience for
-                      users.
-                    </p>{' '}
-                  </Grid.Column>
-                </Grid.Row>
-              </Grid>
-            </Container>
-          </div>
-
-          <div className="div-tag" style={{ backgroundColor: '#222222' }}>
-            <Container>
-              <Segment vertical>
-                <Grid columns={3} divided>
-                  <Grid.Row>
-                    <Grid.Column>
-                      <h1 style={{ color: 'white' }} className="how-it-works">
-                        10/10 Stock Tracker
-                      </h1>
-                      <div>
-                        <p
-                          style={{
-                            color: 'white',
-                            fontSize: '1.25rem',
-                            fontFamily:
-                              '"Helvetica Neue",Helvetica,Arial,sans-serif',
-                          }}
-                        >
-                          This application is a helpful tool to save stocks onto
-                          a personal watchlist. It provides information on the
-                          stock markets top 10 winners and losers of the day.
-                          Users can also search and track any stock in the
-                          market and view stocks that are trending among other
-                          users.
-                        </p>
-                      </div>
-                    </Grid.Column>
-                    <Grid.Column>
-                      <h1 style={{ color: 'white' }} className="how-it-works">
-                        {' '}
-                        Get Started
-                      </h1>
-                      <p
-                        style={{
-                          color: 'white',
-                          fontSize: '1.25rem',
-                          fontFamily:
-                            '"Helvetica Neue",Helvetica,Arial,sans-serif',
-                        }}
-                      >
-                        {' '}
-                        Get access to your Watchlist by creating an account.
-                      </p>
-                      <Link as={Link} to="/signup">
-                        <Button color="purple"> Register Now</Button>
-                      </Link>
-                    </Grid.Column>
-                    <Grid.Column>
-                      <h1 style={{ color: 'white' }} className="how-it-works">
-                        {' '}
-                        Contact Us
-                      </h1>
-                      <p
-                        style={{
-                          color: 'white',
-                          fontSize: '1.25rem',
-                          fontFamily:
-                            '"Helvetica Neue",Helvetica,Arial,sans-serif',
-                          marginBottom: '10px',
-                        }}
-                      >
-                        {' '}
-                        <span>
-                          {' '}
-                          <a
-                            href="mailto:fanuelnalem@outlook.com"
-                            style={{ color: 'white' }}
-                          >
-                            {' '}
-                            <Icon name="mail"></Icon>Send Feedback
-                          </a>{' '}
-                        </span>
-                      </p>
-
-                      <h1
-                        className="how-it-works"
-                        style={{
-                          color: 'white',
-                          marginTop: '0',
-                          marginBottom: '18px',
-                        }}
-                      >
-                        Developed By
-                      </h1>
-                      <div>
-                        <div>
-                          <Image
-                            size="tiny"
-                            centered
-                            className="img"
-                            src={fanuel}
-                          />
-                        </div>
-                      </div>
-                    </Grid.Column>
-                  </Grid.Row>
-                </Grid>
-              </Segment>
-              <p
-                style={{
-                  backgroundColor: 'rgb(55, 55, 59)',
-                  padding: '10px',
-                  borderRadius: '5px',
-                  color: 'white',
-                  fontSize: '1.25rem',
-                  fontFamily: '"Helvetica Neue",Helvetica,Arial,sans-serif',
-                }}
-                className="p-tag"
-              >
-                Copyright 2020. All rights reserved.
-              </p>
-            </Container>
+            <div className="pic">
+              <Image className="image__img" src={s1} />
+              <div className="image__overlay image__overlay--blur">
+                <div style={{ padding: '20px' }}>
+                  <h2> Stock Tracker</h2>
+                  <br></br>
+                  <p>
+                    {' '}
+                    This application is a helpful tool that helps you save
+                    stocks onto a personal wathclist. It provides information
+                    on the stock markets top 10 winners and losers of the day.
+                    Users can also search and track any stock in the market
+                    and view stocks that are trending among other users.
+                  </p>
+                  <p>
+                    Made using: HTML, CSS, JavaScript, Semantics UI, React,
+                    NodeJs, Mongo, PassportJS and Heroku.
+                  </p>
+                  <br></br>
+                  <a
+                    href="https://stocktracker10for10.herokuapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i
+                      style={{ color: 'white' }}
+                      className="fas fa-link link"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://github.com/fanuelalem/Project-3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i
+                      style={{ color: 'white' }}
+                      className="fab fa-github github"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          
+            <div className="pic">
+              <Image className="image__img" src={s2} />
+              <div className="image__overlay image__overlay--blur">
+                <div style={{ padding: '20px' }}>
+                  <h2> Admin App</h2>
+                  <br></br>
+                  <p>
+                    {' '}
+                    A language learning educational app built with React and
+                    Semantic UI front-end framework, NodeJs and express
+                    back-end, JWT and local authentication, and MongoDB. Users
+                    can practice and review their progress and teachers can
+                    assign exercises.
+                  </p>
+                  <p>
+                    Made using: HTML, CSS, JavaScript, Semantics UI, React,
+                    NodeJs, Mongo, PassportJS and Heroku.
+                  </p>
+                  <br></br>
+                  <a
+                    href="https://carnatakehomeproject.herokuapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i
+                      style={{ color: 'white' }}
+                      className="fas fa-link link"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://github.com/fanuelalem/AdminApp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i
+                      style={{ color: 'white' }}
+                      className="fab fa-github github"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div className="pic">
+              <Image className="image__img" src={weather} />
+              <div className="image__overlay image__overlay--blur">
+                <div style={{ padding: '20px' }}>
+                  <h2> Weather Dashboard</h2>
+                  <br></br>
+                  <p>
+                    {' '}
+                    A web application that provides the current weather and a
+                    5-day forecast for a city.
+                  </p>
+                  <p>
+                    Made using: HTML, CSS, JavaScript, jQuery, Bootstrap,
+                    OpenWeather API, Moment.js, and GitHub Pages.
+                  </p>
+                  <br></br>
+                  <a
+                    href="https://fanuelalem.github.io/weather-app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i
+                      style={{ color: 'white' }}
+                      className="fas fa-link link"
+                    ></i>
+                  </a>
+                  <a
+                    href="https://github.com/fanuelalem/weather-app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i
+                      style={{ color: 'white' }}
+                      className="fab fa-github github"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+
+        <br></br>
+        <br></br>
+
+        <a href="https://fanuel-portfolio.herokuapp.com/portfolio">
+          <Button
+            style={{ backgroundColor: '#8b5eb4', color: 'white' }}
+            size="large"
+          >
+            see more
+          </Button>
+        </a>
+      </Segment>
+
+      
+    </div>
     );
   }
 }

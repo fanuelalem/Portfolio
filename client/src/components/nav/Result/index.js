@@ -16,13 +16,9 @@ import {
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import fanuel from './../../../components/Images/fanuel.jpg';
-import ganesh from './../../../components/Images/ganesh.png';
-import vanessa from './../../../components/Images/vanessa.jpeg';
-import husam from './../../../components/Images/husam.jpeg';
-import axios from 'axios';
+ 
 import { Helmet } from 'react-helmet';
-import Axios from 'axios';
-import moment from 'moment';
+ 
 import finhubData from '../../../containers/APICall/finhubData';
 
 // import finhubData from './../../../containers/APICall/finhubData';

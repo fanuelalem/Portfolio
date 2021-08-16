@@ -1,203 +1,183 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './../../App.css';
+import Home from './../Home';
+import Portfolio from './../Portfolio';
 import { Route } from 'react-router-dom';
-import Home from './../Home/index';
-import Winners from '../winners';
-import Losers from './../losers';
-import SignUp from '../SignUp';
-import SignIn from '../SignIn';
-import UserTodoList from '../userWatchList';
-import SignOut from '../SignOut';
-import Nav from './../../components/nav';
-import Trending from './../Trending';
-import ScrollToTop from './../../components/scrolltop/index';
-import Result from './../../components/nav/Result';
-import otherUtil from './../APICall/otherutil';
-import API from './../APICall/utils';
-import Info from '../APICall/info';
-import UpdateProfile from './../UpdateProfile';
-import './../../index.css';
-import { connect } from 'react-redux';
-import axios from 'axios';
-import finhubData from '../APICall/finhubData';
-import Peers from './../APICall/peers';
+import NavBar from '../../components/nav/index';
+import ScrollToTop from './../../components/ScrollToTop';
+import { Container, Icon, Grid } from 'semantic-ui-react';
 
+function App() {
+  return (
+    <div className="App">
+      <ScrollToTop className="scroll" />
 
-class App extends Component {
-  state = {
-    result: {},
-    search: '',
-    xvalues: [],
-    yvalues: [],
-    visible: false,
-    name: '',
-    info: {},
-    currentuser: {},
-    qoute: [],
-    peers: [],
-    getSearch: '',
-  };
+      <NavBar />
 
-  componentDidMount() {
-    axios
-      .get('/api/user/profile', {
-        headers: { authorization: localStorage.getItem('token') },
-      })
-      .then(response => {
-        this.setState({ currentuser: response.data }, () => {
-          // console.log(response.data,'response user data')
-        });
-      });
-    this.searchMovies('AAPL');
-  }
+      <Route exact path="/" component={Home} />
+      <Route exact path="/portfolio" component={Portfolio} />
 
-  searchMovies = async query => {
-    let xfunction = [];
-    let yfunction = [];
+      <div className="footerid" style={{ minHeight: '345px' }}>
+        <Grid columns={4}>
+          <Grid.Row>
+            <Grid.Column width={4}>
+              <h2
+                className="logo"
+                style={{ padding: '55px 0 0 0', color: '#60aafb' }}
+              >
+                Fanuel Alem
+              </h2>
+            </Grid.Column>
+            <Grid.Column width={4}>
+              <div style={{ textAlign: 'left', marginLeft: '100px' }}>
+                <h3
+                  className="contactmefooter"
+                  style={{ padding: '70px 0 0 0', fontSize: '16px' }}
+                >
+                  Contact Me
+                </h3>
+                <br></br>
+                <h3
+                  className="contactmefooter"
+                  style={{ fontSize: '16px', margin: '0 0 4px 0' }}
+                >
+                  (510) 452-7283
+                </h3>
+                <h3
+                  className="contactmefooter"
+                  style={{ fontSize: '16px', margin: '0 0 4px 0' }}
+                >
+                  fanuelnalem@outlook.com
+                </h3>
+                <h3
+                  className="contactmefooter"
+                  style={{ fontSize: '16px', margin: '0 0 4px 0' }}
+                >
+                  530 52nd st. Oakland
+                </h3>
+                <h3
+                  className="contactmefooter"
+                  style={{ fontSize: '16px', margin: '0 0 0 0' }}
+                >
+                  94609
+                </h3>
+              </div>
+            </Grid.Column>
+            <Grid.Column width={4}>
+              <div style={{ textAlign: 'left', marginLeft: '100px' }}>
+                <h3
+                  className="contactmefooter"
+                  style={{ padding: '70px 0 0 0', fontSize: '16px' }}
+                >
+                  Social
+                </h3>
+                <br></br>
 
-    otherUtil.search(query).then(response => {
-      this.setState({ qoute: response.data });
-    });
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/fanuel-alem-12991b32/"
+                  rel="noopener noreferrer"
+                >
+                  <h3
+                    className="menufooter"
+                    style={{ fontSize: '16px', margin: '0 0 4px 0' }}
+                  >
+                    LinkedIn
+                  </h3>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/fanuelalem"
+                  rel="noopener noreferrer"
+                >
+                  <h3
+                    className="menufooter"
+                    style={{ fontSize: '16px', margin: '0 0 4px 0' }}
+                  >
+                    Github
+                  </h3>
+                </a>
 
-    Info.search(query).then(response => {
-      this.setState({ info: response.data });
-    });
-
-    finhubData.search(query).then(response => {
-      this.setState({ result: response.data });
-    });
-
-    API.search(query).then(response => {
-      for (var key in response.data['Time Series (Daily)']) {
-        xfunction.push(key);
-        yfunction.push(response.data['Time Series (Daily)'][key]['1. open']);
-      }
-      this.setState({ xvalues: xfunction, yvalues: yfunction });
-      console.log(xfunction);
-    });
-  };
-
-  handleInputChange = event => {
-    const { value } = event.target;
-    this.setState({ search: value.toUpperCase() });
-  };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-
-    this.searchMovies(this.state.search);
-
-    this.setState({ search: '' });
-  };
-
-  noDisplayFunction = () => {
-    this.setState({ visible: false });
-  };
-
-  goToStockSearch = () => {
-    this.setState({ visible: true });
-  };
-
-  DisplayFunction = () => {
-    this.setState({ visible: true });
-  };
-
-  // handleInputChange = event => {
-  //   const value = event.target.value;
-  //   const name = event.target.name;
-  //   this.setState({
-  //     [name]: value
-  //   });
-  // };
-
-  render() {
-    return (
-      <div>
-        <ScrollToTop className="scroll" />
-        <Nav
-          search={this.state.search}
-          profile={this.state.currentuser}
-          noDisplay={this.noDisplayFunction}
-          display={this.goToStockSearch}
-          onsearch={this.handleInputChange}
-          visible={this.state.visible}
-          name="name is fanuel"
-          buttonClick={this.handleFormSubmit}
-          authenticated={this.props.authenticated}
-        />
-
-        <Route
-          exact
-          path="/searchstock"
-          render={props => (
-            <Result
-              {...props}
-              result={this.state.result}
-              visible={this.state.visible}
-              info={this.state.info}
-              qoute={this.state.qoute}
-              peer={this.state.peers}
-              search={this.state.search}
-              buttonClick={this.handleFormSubmit}
-            />
-          )}
-        />
-
-        <Route
-          exact
-          path="/"
-          render={props => (
-            <Home
-              {...props}
-              name="hello world"
-              visible={this.state.visible}
-              onhomeclick={this.goToStockSearch}
-            />
-          )}
-        />
-
-        <Route exact path="/winners" component={Winners} />
-
-        <Route exact path="/losers" component={Losers} />
-
-        <Route exact path="/updateprofile" component={UpdateProfile} />
-
-        <Route
-          exact
-          path="/signup"
-          display={this.DisplayFunction}
-          component={SignUp}
-        />
-
-        <Route
-          exact
-          path="/signin"
-          display={this.DisplayFunction}
-          component={SignIn}
-        />
-
-        <Route exact path="/signout" component={SignOut} />
-
-        <Route exact path="/trending" component={Trending} />
-
-        <Route
-          exact
-          path="/watchlist"
-          render={props => (
-            <UserTodoList
-              {...props}
-              x={this.state.xvalues}
-              y={this.state.yvalues}
-              qoute={this.state.qoute}
-              result={this.state.result}
-            />
-          )}
-        />
+                <a
+                  target="_blank"
+                  href="https://fanuel-portfolio.herokuapp.com/portfolio"
+                  rel="noopener noreferrer"
+                >
+                  <h3
+                    className="menufooter"
+                    style={{ fontSize: '16px', margin: '0 0 4px 0' }}
+                  >
+                    Portfolio
+                  </h3>
+                </a>
+              </div>
+            </Grid.Column>
+            <Grid.Column width={4} style={{ padding: '70px 0 0 0' }}>
+            
+              <div>
+                <a
+                  href="mailto:fanuelnalem@outlook.com"
+                  style={{ color: '#60aafb', margin: '0 150px 0 0' }}
+                >
+                  <Icon name="mail" size="big"></Icon>
+                </a>
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </div>
-    );
-  }
+      <Container fluid>
+        <p
+          className="para"
+          style={{
+            backgroundColor: '#00444f',
+            color: 'white',
+            padding: '20px',
+            textAlign: 'left',
+          }}
+        >
+          <a
+            style={{ color: 'white', fontWeight: '200' }}
+            href="http://localhost:3000/"
+          >
+            © 2020 Copyright Fanuel Alem.
+          </a>
+
+          <span className="spann">
+            <span className="git-icon">
+              <a
+                style={{ color: 'white' }}
+                href="https://github.com/fanuelalem"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {' '}
+                <Icon style={{ fontSize: '1.7rem' }} name="github"></Icon>
+              </a>
+            </span>
+            <span className="linkedin-icon">
+              <a
+                style={{ color: 'white' }}
+                href="https://www.linkedin.com/in/fanuel-alem-12991b32/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon style={{ fontSize: '1.7rem' }} name="linkedin"></Icon>
+              </a>
+            </span>
+            <span>
+              <a
+                style={{ color: 'white'}}
+                href="mailto:fanuelnalem@outlook.com"
+              >
+                <Icon style={{ fontSize: '1.7rem' }} name="mail"></Icon>
+              </a>
+            </span>
+          </span>
+        </p>
+      </Container>
+    </div>
+  );
 }
 
-function mapStateToProps(state) {
-  return { authenticated: state.auth.authenticated };
-}
-export default connect(mapStateToProps)(App);
+export default App;
