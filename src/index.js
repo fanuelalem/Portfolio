@@ -7,10 +7,10 @@ import App from './containers/App/index';
  
 ReactDOM.render(
        <Router >
-      <HashRouter>
+     
 
       <App />
-      </HashRouter>
+      
 
     </Router>
  
