@@ -16,7 +16,7 @@ import 'aos/dist/aos.css';
 import s2 from './../../components/Images/2.jpg';
 
   import weather from './../../components/Images/weatherpic.png';
-import Resume from './../../components/Images/fanuelResume.pdf';
+import Resume from './../../components/Images/fanuelResumeAug.pdf';
 
 export default class Home extends Component {
   render() {
