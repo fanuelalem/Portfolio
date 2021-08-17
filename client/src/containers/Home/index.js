@@ -12,13 +12,10 @@ import {
 import pic from './../../components/Images/jbpic.png';
 import AosScroll from './../Aos';
 import 'aos/dist/aos.css';
-import stock2 from './../../components/Images/stock2.png';
-import s1 from './../../components/Images/s1.png';
-import s2 from './../../components/Images/s2.png';
+ import s1 from './../../components/Images/s1.jpg';
+import s2 from './../../components/Images/2.jpg';
 
-import stock from './../../components/Images/stockcanva.png';
-import AdminApp from './../../components/Images/adminApp.png';
-import weather from './../../components/Images/weatherpic.png';
+  import weather from './../../components/Images/weatherpic.png';
 import Resume from './../../components/Images/fanuelResume.pdf';
 
 export default class Home extends Component {
@@ -280,23 +277,25 @@ export default class Home extends Component {
       <div style={{ height: '80px' }}></div>
 
       <Segment style={{ padding: '4em 0 6em 0em' }} vertical>
-        <div className="card-containers">
-          <div className="image-container">
+        <div className="card-containers" >
+          <div className="image-container" >
             
 
-            <div className="pic">
+            <div className="picfront" >
               <Image className="image__img" src={s1} />
-              <div className="image__overlay image__overlay--blur">
-                <div style={{ padding: '20px' }}>
+              <div className="image__overlay image__overlay--blur" >
+                <div style={{ padding: '20px' }} >
                   <h2> Stock Tracker</h2>
                   <br></br>
                   <p>
                     {' '}
-                    This application is a helpful tool that helps you save
+                    This application helps you save and track trending
+                    stocks from the market onto a personal watchlist. 
+                    {/* This application is a helpful tool that helps you save
                     stocks onto a personal wathclist. It provides information
                     on the stock markets top 10 winners and losers of the day.
                     Users can also search and track any stock in the market
-                    and view stocks that are trending among other users.
+                    and view stocks that are trending among other users. */}
                   </p>
                   <p>
                     Made using: HTML, CSS, JavaScript, Semantics UI, React,
@@ -325,22 +324,33 @@ export default class Home extends Component {
                   </a>
                 </div>
               </div>
+            
+         
+        
+            
             </div>
           
-            <div className="pic">
+            <div className="picfront">
               <Image className="image__img" src={s2} />
-              <div className="image__overlay image__overlay--blur">
+               <div className="image__overlay image__overlay--blur">
+              
+                
                 <div style={{ padding: '20px' }}>
                   <h2> Admin App</h2>
                   <br></br>
                   <p>
                     {' '}
-                    A language learning educational app built with React and
+                    A language learning educational app where users can practice and review their progress and admins can
+                    assign exercises.
+                    {/* A language learning educational app built with React and
                     Semantic UI front-end framework, NodeJs and express
                     back-end, JWT and local authentication, and MongoDB. Users
                     can practice and review their progress and teachers can
-                    assign exercises.
+                    assign exercises. */}
                   </p>
+ 
+ 
+               
                   <p>
                     Made using: HTML, CSS, JavaScript, Semantics UI, React,
                     NodeJs, Mongo, PassportJS and Heroku.
@@ -366,12 +376,15 @@ export default class Home extends Component {
                       className="fab fa-github github"
                     ></i>
                   </a>
+                  
+                  
                 </div>
               </div>
+          
             </div>
           
           
-            <div className="pic">
+            <div className="picfront">
               <Image className="image__img" src={weather} />
               <div className="image__overlay image__overlay--blur">
                 <div style={{ padding: '20px' }}>
