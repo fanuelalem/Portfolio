@@ -7,6 +7,7 @@ import {
   Icon,
   Segment,
   Image,
+  Modal
 } from 'semantic-ui-react';
 // import quiz from './../../components/Images/quiz-app.png';
 // import profilegenerator from './../../components/Images/profiler-generator.png';
@@ -33,8 +34,6 @@ import pic10 from './../../components/Images/starwars.jpg'
 class Portfolio extends Component {
    
   
-   
-
   render() {
     return (
       <div>
@@ -73,7 +72,7 @@ class Portfolio extends Component {
           <div className="card-containers">
             <div className="image-container" >
             
-            
+{/*             
             <div style={{margin:"0 8px 20px 8px",border:"1px solid rgba(0, 0, 0, 0.125)"}}>
             <div className="pic" style={{width:'350px',height:"250px"}}>
                
@@ -345,7 +344,7 @@ Made using: HTML, CSS, JavaScript, jQuery, Bootstrap,
 
 </div>     
 
-           
+            */}
             </div>
           </div>
         </Segment>
@@ -370,6 +369,8 @@ Made using: HTML, CSS, JavaScript, jQuery, Bootstrap,
            <p className='work' style={{fontSize:"18px",margin:"0px",color:"#828282"}}>
            A collection of projects that I collaborated on.
            </p>
+
+           
 
 <div  > 
   <Segment style={{ padding: '4em 0' }} vertical>

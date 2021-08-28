@@ -6,17 +6,17 @@ import { Route } from 'react-router-dom';
 import NavBar from '../../components/nav/index';
 import ScrollToTop from './../../components/ScrollToTop';
 import { Container, Icon, Grid } from 'semantic-ui-react';
-
-function App() {
+ function App() {
   return (
     <div className="App">
       <ScrollToTop className="scroll" />
 
-      <NavBar />
-
+ 
       <Route exact path="/" component={Home} />
-      <Route exact path="/portfolio" component={Portfolio} />
+            {/* <NavBar /> */}
 
+      <Route exact path="/portfolio" component={Portfolio} />
+ 
       <div className="footerid" style={{ minHeight: '345px' }}>
         <Grid columns={4}>
           <Grid.Row>
