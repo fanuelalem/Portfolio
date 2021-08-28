@@ -160,6 +160,8 @@ body {
      
   }
 
+   
+
    .cardcontent{
     --padding:1.5rem;
     padding:var(--padding);
@@ -195,16 +197,16 @@ body {
     background-color: #e31b6d;
     color:white
    }
-  .cardclass:hover .cardcontent1 {
+  .yellow:hover .cardcontent1 {
     transform:translateY(60px)
   }
-  .cardclass:hover .cardcontent {
+  .yellow:hover .cardcontent {
     transform:translateY(0)
   }
-  .cardclass:hover .cardcontent1 >* {
+  .yellow:hover .cardcontent1 >* {
     opacity: 1;
   }
-  .cardclass:hover .cardcontent >* {
+  .yellow:hover .cardcontent >* {
     opacity: 1;
    }
 
@@ -226,7 +228,7 @@ body {
    
 
   }
-
+ 
   .bgmg1{
 
     background-image: url('./components/Images/stockcanva.png');
@@ -319,8 +321,8 @@ body {
 
   .bgmg6{
     background-image: url('./components/Images/notebook2.jpg');
-    background-size: cover;
-    background-position: 50%;
+     background-size: cover;
+    background-position:top;
   }
 
   .bgmg7{
@@ -347,15 +349,240 @@ body {
  
   
   .activediv{
+    display: inline-block;
     transition: all 600ms ease 0ms;
     opacity: 600ms linear;
      transform:translate(0px,0px);
      transition:.6s;
        }
       
+    
+.yellow{
+  background-image: url('./components/Images/stockcanva.png');
+  background-size: cover; 
+  height: 300px;
+  width: 390px;
+ }
+
+.yellow:hover .page{
+  background-color: white;
+}
+.yellow1{
+  background-image: url('./components/Images/mgmt.jpg');
+  background-size: cover; 
+  height: 300px;
+  width: 390px;
+ }
+
+.yellow1:hover .page{
+  background-color: white;
+}
+
+.yellow1:hover .cardcontent1 {
+  transform:translateY(60px)
+}
+.yellow1:hover .cardcontent {
+  transform:translateY(0)
+}
+.yellow1:hover .cardcontent1 >* {
+  opacity: 1;
+}
+.yellow1:hover .cardcontent >* {
+  opacity: 1;
+ }
+
 
  
 
+ .yellow2{
+  background-image: url('./components/Images/jedistarwars.jpg');
+  background-size: cover; 
+  height: 300px;
+  width: 390px;
+ }
+
+.yellow2:hover .page{
+  background-color: white;
+}
+
+.yellow2:hover .cardcontent1 {
+  transform:translateY(60px)
+}
+.yellow2:hover .cardcontent {
+  transform:translateY(0)
+}
+.yellow2:hover .cardcontent1 >* {
+  opacity: 1;
+}
+.yellow2:hover .cardcontent >* {
+  opacity: 1;
+ }
+
+
+
+ .yellow3{
+  background-image: url('./components/Images/weatherpic.png');
+  background-size: cover; 
+  height: 300px;
+  width: 390px;
+ }
+
+.yellow3:hover .page{
+  background-color: white;
+}
+
+.yellow3:hover .cardcontent1 {
+  transform:translateY(60px)
+}
+.yellow3:hover .cardcontent {
+  transform:translateY(0)
+}
+.yellow3:hover .cardcontent1 >* {
+  opacity: 1;
+}
+.yellow3:hover .cardcontent >* {
+  opacity: 1;
+ }
+
+
+ .yellow4{
+  background-image: url('./components/Images/emp-mangmnt.jpg');
+  background-size: cover; 
+  height: 300px;
+  width: 390px;
+ }
+
+.yellow4:hover .page{
+  background-color: white;
+}
+
+.yellow4:hover .cardcontent1 {
+  transform:translateY(60px)
+}
+.yellow4:hover .cardcontent {
+  transform:translateY(0)
+}
+.yellow4:hover .cardcontent1 >* {
+  opacity: 1;
+}
+.yellow4:hover .cardcontent >* {
+  opacity: 1;
+ }
+
+
+ .yellow5{
+  background-image: url('./components/Images/notebook2.jpg');
+  background-size: cover; 
+  height: 300px;
+  width: 390px;
+ }
+
+.yellow5:hover .page{
+  background-color: white;
+}
+
+.yellow5:hover .cardcontent1 {
+  transform:translateY(60px)
+}
+.yellow5:hover .cardcontent {
+  transform:translateY(0)
+}
+.yellow5:hover .cardcontent1 >* {
+  opacity: 1;
+}
+.yellow5:hover .cardcontent >* {
+  opacity: 1;
+ }
+
+
+
+ .yellow6{
+  background-image: url('./components/Images/quizapp.jpg');
+  background-size: cover; 
+  height: 300px;
+  width: 390px;
+ }
+
+.yellow6:hover .page{
+  background-color: white;
+}
+
+.yellow6:hover .cardcontent1 {
+  transform:translateY(60px)
+}
+.yellow6:hover .cardcontent {
+  transform:translateY(0)
+}
+.yellow6:hover .cardcontent1 >* {
+  opacity: 1;
+}
+.yellow6:hover .cardcontent >* {
+  opacity: 1;
+ }
+ .yellow7{
+  background-image: url('./components/Images/gitpro.jpg');
+  background-size: cover; 
+  height: 300px;
+  width: 390px;
+ }
+
+.yellow7:hover .page{
+  background-color: white;
+}
+
+.yellow7:hover .cardcontent1 {
+  transform:translateY(60px)
+}
+.yellow7:hover .cardcontent {
+  transform:translateY(0)
+}
+.yellow7:hover .cardcontent1 >* {
+  opacity: 1;
+}
+.yellow7:hover .cardcontent >* {
+  opacity: 1;
+ }
+
+
+
+ .yellow8{
+  background-image: url('./components/Images/psw.png');
+  background-size: cover; 
+  height: 300px;
+  width: 390px;
+ }
+
+.yellow8:hover .page{
+  background-color: white;
+}
+
+.yellow8:hover .cardcontent1 {
+  transform:translateY(60px)
+}
+.yellow8:hover .cardcontent {
+  transform:translateY(0)
+}
+.yellow8:hover .cardcontent1 >* {
+  opacity: 1;
+}
+.yellow8:hover .cardcontent >* {
+  opacity: 1;
+ }
+.page {
+  height: 100%;
+  width: 100%;
+  transition:.5s
+
+}
+
+ 
+
+.manage{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+  
       
 
       .activediv1{
@@ -402,19 +629,21 @@ body {
    perspective:3000px;
    perspective-origin: 50% 50%;
    transition:height 600ms ease 0s ;
-  }
+ 
+   }
  .transitioneffect2{
   height: 300px;
   perspective:3000px;
   perspective-origin: 50% 50%;
   transition:height 600ms ease 0s ;
-   
+    
 }
 .transitioneffect3{
   height: 600px;
   perspective:3000px;
   perspective-origin: 50% 50%;
   transition:height 600ms ease 0s ;
+  background-color: orange;
    
 }
 .transitioneffect1{

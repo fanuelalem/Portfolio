@@ -271,8 +271,7 @@ export default class Home extends Component {
         </div>
        </div>
        <Nav id='nav' />
-
-  
+ 
       <div style={{ backgroundColor: '#f9f9f9', padding: '59px 0 100px 0' }}>
         <Container className="bioo">
          
@@ -709,396 +708,294 @@ export default class Home extends Component {
       </div>
 
       
- 
-      <Segment style={{ padding: '0em 0 6em 0em',backgroundColor:"#f9f9f9" }} vertical>
-        
-            <div className={`image-container ${this.state.all == 'all'? 'transitioneffect' : this.state.all == 'react'? 'transitioneffect2'
-            : this.state.all == 'js'? 'transitioneffect3':this.state.all =='node'? 'transitioneffect1' : null}`}  >
-            
-<div className={`${this.state.all == 'all'||this.state.all == 'react'? 'activediv' : 'inactivediv'}` }>
-
- 
-<div className='cardclass' style={{position:"relative",width:"390px",height:"300px"}}>
-
- 
   
-<div className='bgmg1' style={{width:'100%',height:'100%',position:"absolute",left:0,bottom:0,top:0}} >
-
- <div className='onhoverimg' style={{height:"100%",width:"100%"}}>
-
-  
- <div className='cardcontent1' >
-<h2 className='work' style={{margin:"0px"}}>Stock Tracker </h2>
-<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>React Js/Node Js/MongoDB</p>
-</div>
-
-
-<div className='cardcontent'>
- 
-<button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
-</div>
-
-
-
-</div>
-</div>
-
-
-</div>
-
-
-            
-            </div>
-
-
-
-    
-
-
-           
-            <div className={`${this.state.all == 'all'||this.state.all == 'react'? 'activediv' : 'inactivediv'}`}>
-
-         
- <div className='cardclass' style={{position:"relative",width:"390px",height:"300px"}}>
-
- 
-  
-<div className='bgmg2' style={{width:'100%',height:'100%',position:"absolute",left:0,bottom:0,top:0}} >
-
- <div className='onhoverimg' style={{height:"100%",width:"100%"}}>
-
-  
- <div className='cardcontent1' >
-<h2 className='work' style={{margin:"0px"}}>Learning Made Eazy</h2>
-<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>React Js/Node Js/MongoDB</p>
-</div>
-
-
-<div className='cardcontent'>
-
-<button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
-</div>
-
-
-
-</div>
-</div>
-
-
-</div>
-
-
-          
-            </div>  
-
-
-
-
-
-
-
-
-            <div className={`${this.state.all == 'all'||this.state.all == 'react'? 'activediv' : 'inactivediv'}`}>
-
-      
-
-    
- <div className='cardclass' style={{position:"relative",width:"390px",height:"300px"}}>
-
- 
-  
-<div className='bgmg3' style={{width:'100%',height:'100%',position:"absolute",left:0,bottom:0,top:0}} >
-
- <div className='onhoverimg' style={{height:"100%",width:"100%"}}>
-
-  
- <div className='cardcontent1' >
-<h2 className='work' style={{margin:"0px"}}>Star Wars Personality Quiz</h2>
-<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"16px"}}>React Js/Node Js/SQL</p>
-</div>
-
-
-<div className='cardcontent'>
-
-<button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
-</div>
-
-
-
-</div>
-</div>
-
-
-</div>
-
-
-</div>
-          
-            <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='js'? 'activedivjs': 'inactivediv'}`}>
-
-        
- <div className='cardclass' style={{position:"relative",width:"390px",height:"300px"}}>
-
- 
- <div className='bgmg4' style={{width:'100%',height:'100%',position:"absolute",left:0,bottom:0,top:0}} >
-
-<div className='onhoverimg' style={{height:"100%",width:"100%"}}>
-
- 
-<div className='cardcontent1' >
-<h2 className='work' style={{margin:"0px"}}>Weather Dashboard</h2>
-<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML/CSS/JavaScript/Jquery</p>
-</div>
-
-
-<div className='cardcontent'>
-
-<button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
-</div>
-
-
-
-</div>
-</div>
-</div>
-
-
-        </div>
-         
-   
-             <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='node'? 'node1active' : 'inactivediv'}`}>
-
-      
- <div className='cardclass' style={{position:"relative",width:"390px",height:"300px"}}>
-
- 
-  
-<div className='bgmg5' style={{width:'100%',height:'100%',position:"absolute",left:0,bottom:0,top:0}} >
-
- <div className='onhoverimg' style={{height:"100%",width:"100%"}}>
-
-  
- <div className='cardcontent1' >
-<h2 className='work' style={{margin:"0px"}}>Employee Management CLI</h2>
-<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>Node Js</p>
-</div>
-
-
-<div className='cardcontent'>
-
-<button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
-</div>
-
-
-
-</div>
-</div>
-
-
-</div>
-
-
-    </div>
-
-        <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='js'? 'activedivjs2': 'inactivediv'}`}>
-
- 
-        <div className='cardclass' style={{position:"relative",width:"390px",height:"300px"}}>
-
- 
-  
-<div className='bgmg6' style={{width:'100%',height:'100%',position:"absolute",left:0,bottom:0,top:0}} >
-
- <div className='onhoverimg' style={{height:"100%",width:"100%"}}>
-
-  
- <div className='cardcontent1' >
-<h2 className='work' style={{margin:"0px"}}>NoteBoook</h2>
-<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML/CSS/JavaScript/Jquery</p>
-</div>
-
-
-<div className='cardcontent'>
-
-<button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
-</div>
-
-
-
-</div>
-</div>
-
-
-
-
-
-
-
-
-</div>
-
-
-          </div>  
-     
-     
-          <div className={`${this.state.all == 'all'? 'activediv' : this.state.all=='js'? 'activedivjs3': 'inactivediv'}`}>
-
-  
- <div className='cardclass' style={{position:"relative",width:"390px",height:"300px"}}>
-
- 
-  
-<div className='bgmg7' style={{width:'100%',height:'100%',position:"absolute",left:0,bottom:0,top:0}} >
-
- <div className='onhoverimg' style={{height:"100%",width:"100%"}}>
-
-  
- <div className='cardcontent1' >
-<h2 className='work' style={{margin:"0px"}}>JS Quiz App</h2>
-<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML/CSS/JavaScript</p>
-</div>
-
-
-<div className='cardcontent'>
-
-<button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
-</div>
-
-
-
-</div>
-</div>
-
-
-</div>
-
-
-        </div>
-    
-    
-        <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='node'? 'node1active2' : 'inactivediv'}`}>
-
-     
-   
- <div className='cardclass' style={{position:"relative",width:"390px",height:"300px"}}>
-
- 
-  
-<div className='bgmg8' style={{width:'100%',height:'100%',position:"absolute",left:0,bottom:0,top:0}} >
-
- <div className='onhoverimg' style={{height:"100%",width:"100%"}}>
-
-  
- <div className='cardcontent1' >
-<h2 className='work' style={{margin:"0px"}}>Github Profile Creator</h2>
-<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>Node Js</p>
-</div>
-
-
-<div className='cardcontent'>
-
-<button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
-</div>
-
-
-
-</div>
-</div>
-
-
-</div>
-
-
-  
-  
-  
-   </div>
-   
-   
-   
-   <div className={`${this.state.all == 'all'? 'activediv' :this.state.all =='js'? 'activedivjs4': 'inactivediv'}`}>
-
-
- <div className='cardclass' style={{position:"relative",width:"390px",height:"300px"}}>
-
- <div className='bgmg' style={{width:'100%',height:'100%',position:"absolute",left:0,bottom:0,top:0}} >
-
-  <div className='onhoverimg' style={{height:"100%",width:"100%"}}>
 
    
-  <div className='cardcontent1' >
-<h2 className='work' style={{margin:"0px"}}>Password Generator</h2>
-<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"16px"}}>HTML/CSS/JavaScript</p>
-</div>
-
-
-<div className='cardcontent'>
-  <button onClick={()=>{this.setState({isOpen:true})}} > open modal</button>
-
-
-
+<div className={`${this.state.all == 'all' ? 'transitioneffect' : this.state.all == 'js' ? 'transitioneffect3' : this.state.all == 'react' || this.state.all == 'node' ? 'transitioneffect2':null}`} style={{display:"flex",justifyContent:'center',flexWrap:"wrap"}}>
+ 
+ <div className={`${this.state.all == 'all'||this.state.all == 'react'? 'activediv' : 'inactivediv'}` }>
  
  
- <Modal      
-          closeTimeoutMS={500}
-          style = {{overlay : {backgroundColor:'none',borderRadius:"0px"},content : { borderRadius:"0px",marginLeft:"330px",marginRight:'330px',height:"500px",padding:'0px'}}}
-    isOpen={this.state.isOpen} onRequestClose={()=>{
-   this.setState({isOpen:false})
- }}> 
-  
-  
-
- <div style={{padding:"0px",margin:"0px",boxSizing:'border-box'}}>
- <div className='carousel-container'>
-   <div className='carousel-slide'>
-     <img   src={pic3}/>
-     <img   src={pic3}/>
-     <img   src={pic3}/>
-     <img   src={pic3}/>
-     <img   src={pic3}/>
-
-   </div>
- </div>
- <button id='nextBtn'>Next</button>
- <button id='prevBtn'>Prev</button>
- <button onClick={()=>{
-  this.setState({isOpen:false})
-}}>close</button>
+ <div className='manage'>
+        <div className='yellow'>
+          <div className='page'>
+          <div className='cardcontent1' >
+ <h2 className='work' style={{margin:"0px"}}>Stock Tracker </h2>
+ <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>React Js / Node Js / MongoDB</p>
  </div>
  
- </Modal>
  
-
-
-<button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-   
-
-</div>
-           
-        
-        
-        
+ <div className='cardcontent'>
+  
+ <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
+ </div>
+ 
+ 
           </div>
-         
- 
-
-         
-      </Segment>
- 
-     
+ <div>
    
+ </div>
+        </div>
+  
+ 
+        </div>
+    
+             
+             </div>
+ 
+ 
+ 
+            
+             <div className={`${this.state.all == 'all'||this.state.all == 'react'? 'activediv' : 'inactivediv'}`}>
+ 
+   
+             <div className='manage'>
+        <div className='yellow1'>
+          <div className='page'>
+          <div className='cardcontent1' >
+ <h2 className='work' style={{margin:"0px"}}>Learning Made Eazy </h2>
+ <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>React Js / Node Js / MongoDB</p>
+ </div>
+ 
+ 
+ <div className='cardcontent'>
+  
+ <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
+ </div>
+ 
+ 
+          </div>
+ <div>
+   
+ </div>
+        </div>
+ 
+  
+ 
+        </div>
+    
+           
+             </div>  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+             <div className={`${this.state.all == 'all'||this.state.all == 'react'? 'activediv' : 'inactivediv'}`}>
+ 
+       
+ 
+             <div className='manage'>
+        <div className='yellow2'>
+          <div className='page'>
+          <div className='cardcontent1' >
+ <h2 className='work' style={{margin:"0px"}}>Star Wars Personality Quiz </h2>
+ <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>React Js / Node Js / SQL</p>
+ </div>
+ 
+ 
+ <div className='cardcontent'>
+  
+ <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
+ </div>
+ 
+ 
+          </div>
+ <div>
+   
+ </div>
+        </div>
+    
+        </div>
+    
+ </div>
+           
+             <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='js'? 'activedivjs': 'inactivediv'}`}>
+ 
+             <div className='manage'>
+        <div className='yellow3'>
+          <div className='page'>
+          <div className='cardcontent1' >
+ <h2 className='work' style={{margin:"0px"}}>Weather Dashboard </h2>
+ <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML / CSS / Javascript</p>
+ </div>
+ 
+ 
+ <div className='cardcontent'>
+  
+ <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
+ </div>
+ 
+ 
+          </div>
+ <div>
+   
+ </div>
+        </div>
+      
+        </div>
+    
+         </div>
+          
+    
+              <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='node'? 'node1active' : 'inactivediv'}`}>
+ 
+   
+              <div className='manage'>
+        <div className='yellow4'>
+          <div className='page'>
+          <div className='cardcontent1' >
+ <h2 className='work' style={{margin:"0px"}}>Employee Directory CLI </h2>
+ <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>Node Js</p>
+ </div>
+ 
+ 
+ <div className='cardcontent'>
+  
+ <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
+ </div>
+ 
+ 
+          </div>
+ <div>
+   
+ </div>
+        </div>
+ 
+        
+        </div>
+    
+     </div>
+ 
+         <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='js'? 'activedivjs2': 'inactivediv'}`}>
+ 
+  
+         <div className='manage'>
+        <div className='yellow5'>
+          <div className='page'>
+          <div className='cardcontent1' >
+ <h2 className='work' style={{margin:"0px"}}>NoteBook </h2>
+ <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML / CSS / Javascript</p>
+ </div>
+ 
+ 
+ <div className='cardcontent'>
+  
+ <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
+ </div>
+ 
+ 
+          </div>
+ <div>
+   
+ </div>
+        </div>
+        
+        </div>
+    
+           </div>  
+      
+      
+           <div className={`${this.state.all == 'all'? 'activediv' : this.state.all=='js'? 'activedivjs3': 'inactivediv'}`}>
+ 
+   
+           <div className='manage'>
+        <div className='yellow6'>
+          <div className='page'>
+          <div className='cardcontent1' >
+ <h2 className='work' style={{margin:"0px"}}>Quiz App </h2>
+ <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML / CSS / Javascript</p>
+ </div>
+ 
+ 
+ <div className='cardcontent'>
+  
+ <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
+ </div>
+ 
+ 
+          </div>
+ <div>
+   
+ </div>
+   
+        </div>
+ 
+        
+        </div>
+    
+         </div>
+     
+     
+         <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='node'? 'node1active2' : 'inactivediv'}`}>
+ 
+      
+  
+         <div className='manage'>
+        <div className='yellow7'>
+          <div className='page'>
+          <div className='cardcontent1' >
+ <h2 className='work' style={{margin:"0px"}}>Github Profile Creator </h2>
+ <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>React Js/Node Js/MongoDB</p>
+ </div>
+ 
+ 
+ <div className='cardcontent'>
+  
+ <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
+ </div>
+ 
+ 
+          </div>
+ <div>
+   
+ </div>
+        </div>
+     
+        </div>
+    
+   
+   
+    </div>
+    
+    
+    
+    <div className={`${this.state.all == 'all'? 'activediv' :this.state.all =='js'? 'activedivjs4': 'inactivediv'}`}>
+ 
+ 
+    <div className={`manage`}>
+        <div className='yellow8'>
+          <div className='page'>
+          <div className='cardcontent1' >
+ <h2 className='work' style={{margin:"0px"}}>Password Generator </h2>
+ <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML / CSS / Javascript</p>
+ </div>
+ 
+ 
+ <div className='cardcontent'>
+  
+ <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
+ </div>
+ 
+ 
+          </div>
+ <div>
+   
+ </div>
+        </div>
+      
+        </div>
+    
+ </div>
+            
+         
+         
+          </div>
+     
+          
      
       <div className='contact-me'>
         <div style={{width:"100%",height:"100%",backgroundColor:"rgba(46,51,71,.88)"}}>
@@ -1142,6 +1039,9 @@ export default class Home extends Component {
     </Grid>
         </div>
       </div>
+   
+   
+   
     </div>
     );
   }
