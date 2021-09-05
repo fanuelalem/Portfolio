@@ -7,31 +7,34 @@ import {
   Grid,
   Segment,
   Image,
- 
-  Icon
+  Icon,
+  Item
 } from 'semantic-ui-react';
 import Nav from './../../components/nav/index'
 import icon1image from './../../components/Images/icon1.jpg'
 import icon2image from './../../components/Images/icon2.jpg'
 import icon3image from './../../components/Images/icon3.jpg'
 import icon4image from './../../components/Images/icon4.jpg'
- import { debounce } from 'lodash';
+  import { debounce, over } from 'lodash';
 import pic from './../../components/Images/snow.jpg';
-import pic1 from './../../components/Images/quizapp.jpg'
-import pic2 from './../../components/Images/emp-mangmnt.jpg'
-import pic3 from './../../components/Images/drectory.jpg'
-import pic4 from './../../components/Images/f.jpg'
-import pic5 from './../../components/Images/gitpro.jpg'
-import pic6 from './../../components/Images/weatherpic.png'
 import pngitem from './../../components/Images/pngitem.png'
+import modalshot1 from './../../components/Images/modalshot1.png'
+import modalshot2 from './../../components/Images/modalshot2.png'
+import modalshot3 from './../../components/Images/modalshot3.png'
+import modalshot4 from './../../components/Images/modalshot4.png'
+import modalshot5 from './../../components/Images/modalshot5.png'
+ import modalshot7 from './../../components/Images/modalshot7.png'
+import modalshot8 from './../../components/Images/employee-tracker.png'
+import modalshot9 from './../../components/Images/modalshot9.png'
+ import modalshot10 from './../../components/Images/modalshot10.png'
+ import modalshot11 from './../../components/Images/modalshot11.png'
+ import modalshot12 from './../../components/Images/modalshot12.png'
+ import modalshot13 from './../../components/Images/modalshot13.png'
+ import clickhere from './../../components/Images/click.png'
  import AosScroll from './../Aos';
 import 'aos/dist/aos.css';
- import s1 from './../../components/Images/stockcanva.png';
-import s2 from './../../components/Images/mgmt.jpg';
- import weather from './../../components/Images/weatherpic.png';
- import Modalx from './../Modal/index'
- import Modal from 'react-modal';
  
+
 
 
 export default class Home extends Component {
@@ -41,10 +44,44 @@ export default class Home extends Component {
     express: '',
     react: '',
     js: '',
-    isOpen:false
-  }
-  componentDidMount = () => {
+    isOpen:false,
+    x: 0,
+    x2:0,
+    x3: 0,
+    x4:0,
+    x5: 0,
+    x6:0,
+    x7: 0,
+    x8:0,
+    x9: 0,
+    topElemenent:'topEl',
+    aboutElemenent:'aboutEl',
+    portfolioElemenent:'portfolioEl',
+    contactElemenent:'contactEl'
+
     
+   }
+  componentDidMount = () => {
+    const btns = document.querySelectorAll('[data-target]');
+    const overlay = document.getElementById('overlay')
+    const overlay1 = document.getElementById('overlay1')
+    const overlay2 = document.getElementById('overlay2')
+    const overlay3 = document.getElementById('overlay3')
+    const overlay4 = document.getElementById('overlay4')
+    const overlay5 = document.getElementById('overlay5')
+    const overlay6 = document.getElementById('overlay6')
+    const overlay7 = document.getElementById('overlay7')
+    const overlay8 = document.getElementById('overlay8')
+    const overlay9 = document.getElementById('overlay9')
+
+    btns.forEach((item)=>{
+      item.addEventListener('click',()=>{
+        document.querySelector(item.dataset.target).classList.add('on')
+        overlay.classList.add('on')
+      })
+    })
+
+     
     const image = document.getElementById('image')
     const myinfo = document.getElementById('whoami')
     const intro = document.getElementById('introparagraph')
@@ -74,7 +111,7 @@ export default class Home extends Component {
     const top = image.getBoundingClientRect().top
     const height = window.innerHeight-50
      
-
+                          
 
     if(top<height){
       image.classList.add('already-on-page')
@@ -127,7 +164,7 @@ export default class Home extends Component {
     }
 
     const scrollFunction = (e) => {
-      console.count(e,'e')
+    
     const scrolly = window.scrollY
     const backgroundheight = back.getBoundingClientRect().height 
     const navheight = nav.getBoundingClientRect().height
@@ -195,29 +232,581 @@ export default class Home extends Component {
     }
 
 
-    window.addEventListener('scroll' , debounce(scrollFunction,15))
+    window.addEventListener('scroll' , (scrollFunction))
 
-     
+     window.addEventListener('click',(e)=>{
+        if(e.target == overlay || e.target == overlay1 || e.target == overlay2 || e.target == overlay3
+          || e.target == overlay4 || e.target == overlay5 || e.target == overlay6 || e.target == overlay7 || e.target == overlay8
+          || e.target == overlay9)  {
+ 
+         const allmodals = document.querySelectorAll('.mask-rap')
+         allmodals.forEach((item)=>{
+           item.classList.remove('on')
+           overlay.classList.remove('on')
+           overlay1.classList.remove('on')
+           overlay2.classList.remove('on')
+           overlay3.classList.remove('on')
+           overlay4.classList.remove('on')
+           overlay5.classList.remove('on')
+           overlay6.classList.remove('on')
+           overlay7.classList.remove('on')
+           overlay8.classList.remove('on')
+ 
+ 
+         })
+        }
+      })
 
   }
  
-
- 
+    
+  
  
   render() {
-   
-  
-    return (
-      <div >
-        <div className='mask'>
-          <div className={`${this.state.isOpen ? 'maskdiv' : 'nonvisible'}`} >
 
+     
+  const sliderArray = [
+    {image:`${modalshot1}`},{image:`${modalshot2}`},{image:`${modalshot3}`}
+]
+ 
+const sliderArray2 = [
+  {image:`${modalshot4}`}
+]
+
+const sliderArray3 = [
+ {image:`${modalshot5}`}
+]
+
+const sliderArray4 = [
+  {image:`${modalshot7}`}
+ ]
+
+ const sliderArray5 = [
+  {image:`${modalshot8}`}
+ ]
+
+ const sliderArray6 = [
+  {image:`${modalshot10}`}
+ ]
+
+ const sliderArray7 = [
+  {image:`${modalshot11}`}
+ ]
+   
+ const sliderArray8 = [
+  {image:`${modalshot12}`}
+ ]
+ const sliderArray9 = [
+  {image:`${modalshot13}`}
+ ]
+
+     const goLeft = () => {
+ 
+      this.state.x === 0? this.setState({x:-100 * (sliderArray.length -1)})
+      : this.setState({x:this.state.x + 100})    
+
+      this.state.x2 === 0? this.setState({x2:-100 * (sliderArray2.length -1)})
+      : this.setState({x2:this.state.x2 + 100})  
+      
+      this.state.x3 === 0? this.setState({x3:-100 * (sliderArray3.length -1)})
+      : this.setState({x2:this.state.x3 + 100})  
+
+      this.state.x4 === 0? this.setState({x4:-100 * (sliderArray4.length -1)})
+      : this.setState({x2:this.state.x4 + 100})  
+
+      this.state.x5 === 0? this.setState({x5:-100 * (sliderArray5.length -1)})
+      : this.setState({x2:this.state.x5 + 100})  
+
+      this.state.x6 === 0? this.setState({x6:-100 * (sliderArray6.length -1)})
+      : this.setState({x2:this.state.x6 + 100})  
+
+      this.state.x7 === 0? this.setState({x7:-100 * (sliderArray7.length -1)})
+      : this.setState({x2:this.state.x7 + 100})  
+
+      this.state.x8 === 0? this.setState({x8:-100 * (sliderArray8.length -1)})
+      : this.setState({x2:this.state.x8 + 100})  
+
+      this.state.x9 === 0? this.setState({x9:-100 * (sliderArray9.length -1)})
+      : this.setState({x2:this.state.x9 + 100})  
+    
+    }
+
+    const goRight = () => {
+       this.state.x === -100 * (sliderArray.length -1) ? this.setState({x:0})
+      : this.setState({x:this.state.x -100})
+     this.state.x2 === -100 * (sliderArray2.length -1) ? this.setState({x2:0})
+      : this.setState({x2:this.state.x2 -100})
+      this.state.x3 === -100 * (sliderArray3.length -1) ? this.setState({x3:0})
+      : this.setState({x3:this.state.x3 -100})
+      this.state.x4 === -100 * (sliderArray4.length -1) ? this.setState({x4:0})
+      : this.setState({x4:this.state.x4 -100})
+      this.state.x5 === -100 * (sliderArray5.length -1) ? this.setState({x5:0})
+      : this.setState({x5:this.state.x5 -100})
+      this.state.x6 === -100 * (sliderArray6.length -1) ? this.setState({x6:0})
+      : this.setState({x6:this.state.x6 -100})
+      this.state.x7 === -100 * (sliderArray7.length -1) ? this.setState({x7:0})
+      : this.setState({x7:this.state.x7 -100})
+      this.state.x8 === -100 * (sliderArray8.length -1) ? this.setState({x8:0})
+      : this.setState({x8:this.state.x8 -100})
+      this.state.x9 === -100 * (sliderArray9.length -1) ? this.setState({x9:0})
+      : this.setState({x9:this.state.x9 -100})
+     }
+
+    return (
+    <div>
+
+
+<div id='modal11' 
+className='mask-rap'
+>
+<div className='mask' id='overlay'>
+
+</div>
+<div className='modal1' style={{maxWidth:"700px",height:"680px"}}>
+  
+
+<div class="slider">
+  {sliderArray.map((item,index)=>{
+    return(
+      <div class="slide" style={{transform:`translateX(${this.state.x}%)`}} >
+
+       <div style={{width:"100%",height:"100%",backgroundImage:`url(${item.image})`,backgroundSize:"cover",backgroundPosition:"center"}}>
           </div>
 
-        </div>
+              </div>
+    )
+  })}
+ 
+
+      <div onClick={goLeft} style={{position:'absolute',bottom:'0',color:"white",cursor:'pointer',padding:"15px 30px 15px 30px",backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-left"></i>
+    </div>
+    <div onClick={goRight} style={{position:'absolute',bottom:'0',color:"white",cursor:'pointer',padding:"15px 30px 15px 30px",right:'0',backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-right"></i>
+    </div> 
+  </div>
+ 
+
+   <div style={{borderTop:"3px solid black",padding:'35px 0 0 20px'}}>
+<h1 style={{color:"#616161",margin:"0px",fontSize:"28px"}} className='work'>Stock Tracker</h1>
+<h1 className='work5'>Personal Finances Organizer </h1>
+<p className='poppins4' style={{marginTop:"15px",fontSize:"16px",color:"#444",fontWeight:"300"}}>NeverSurrender is a platform for the new ALS foundation mobile app in hopes to raise awareness and research funding to fight ALS. Pure JavaScript marketing site to promote the new ALS NeverSurrender app.</p>
+  
+  
+  <div style={{marginTop:"10px"}}>
+ <a href='https://stocktracker10for10.herokuapp.com/' target='_blank'>
+
+  <button className='btn learnmorework2' data-target='#modal11' style={{fontWeight:"bold"}}>
+    
+     VIEW SITE</button>
+</a>
+  </div>
+   </div>
+ 
+ </div>
+</div>
+  
+ 
+ 
+
+<div id='modal12' 
+className='mask-rap'
+>
+<div className='mask' id='overlay1'>
+
+</div>
+<div className='modal1' style={{maxWidth:"700px",height:"680px"}}>
+  
+
+<div class="slider">
+  {sliderArray2.map((item,index)=>{
+    return(
+      <div class="slide" style={{transform:`translateX(${this.state.x2}%)`}} >
+
+       <div style={{width:"100%",height:"100%",backgroundImage:`url(${item.image})`,backgroundSize:"cover",backgroundPosition:"center"}}>
+          </div>
+
+              </div>
+    )
+  })}
+ 
+
+      {/* <div onClick={goLeft} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-left"></i>
+    </div>
+    <div onClick={goRight} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",right:'0',backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-right"></i>
+    </div>  */}
+  </div>
+ 
+
+   <div style={{borderTop:"3px solid black",padding:'35px 0 0 20px'}}>
+<h1 style={{color:"#616161",margin:"0px",fontSize:"28px"}} className='work'>Stock Tracker</h1>
+<h1 className='work5'>Personal Finances Organizer </h1>
+<p className='poppins4' style={{marginTop:"15px",fontSize:"16px",color:"#444",fontWeight:"300"}}>NeverSurrender is a platform for the new ALS foundation mobile app in hopes to raise awareness and research funding to fight ALS. Pure JavaScript marketing site to promote the new ALS NeverSurrender app.</p>
+   
+<div style={{marginTop:"10px"}}>
+  <a href='https://learningmadeeazy.herokuapp.com/' target='_blank'>
+  <button className='btn learnmorework2' data-target='#modal11' style={{fontWeight:"bold"}}>
+    
+     VIEW SITE</button>
+</a>
+  </div>
+   
+   </div>
+ 
+
+
+
+
+ </div>
+</div>
+  
+ 
+ 
+<div id='modal13' 
+className='mask-rap'
+>
+<div className='mask' id='overlay2'>
+
+</div>
+<div className='modal1' style={{maxWidth:"700px",height:"680px"}}>
+  
+
+<div class="slider">
+  {sliderArray3.map((item,index)=>{
+    return(
+      <div class="slide" style={{transform:`translateX(${this.state.x3}%)`}} >
+
+       <div style={{width:"100%",height:"100%",backgroundImage:`url(${item.image})`,backgroundSize:"cover",backgroundPosition:"center"}}>
+          </div>
+
+              </div>
+    )
+  })}
+ 
+
+      {/* <div onClick={goLeft} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-left"></i>
+    </div>
+    <div onClick={goRight} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",right:'0',backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-right"></i>
+    </div>  */}
+  </div>
+ 
+
+   <div style={{borderTop:"3px solid black",padding:'35px 0 0 20px'}}>
+<h1 style={{color:"#616161",margin:"0px",fontSize:"28px"}} className='work'>Stock Tracker</h1>
+<h1 className='work5'>Personal Finances Organizer </h1>
+<p className='poppins4' style={{marginTop:"15px",fontSize:"16px",color:"#444",fontWeight:"300"}}>NeverSurrender is a platform for the new ALS foundation mobile app in hopes to raise awareness and research funding to fight ALS. Pure JavaScript marketing site to promote the new ALS NeverSurrender app.</p>
+   
+<div style={{marginTop:"10px"}}>
+
+  <a href='https://thejedicode.herokuapp.com/' target='_blank'>
+  <button className='btn learnmorework2' data-target='#modal11' style={{fontWeight:"bold"}}>
+    
+     VIEW SITE</button>
+     </a>
+
+  </div>
+   </div>
+ 
+ </div>
+</div>
+  
+ 
+<div id='modal14' 
+className='mask-rap'
+>
+<div className='mask' id='overlay3'>
+
+</div>
+<div className='modal1' style={{maxWidth:"700px",height:"680px"}}>
+  
+
+<div class="slider">
+  {sliderArray4.map((item,index)=>{
+    return(
+      <div class="slide" style={{transform:`translateX(${this.state.x4}%)`}} >
+
+       <div style={{width:"100%",height:"100%",backgroundImage:`url(${item.image})`,backgroundSize:"cover",backgroundPosition:"center"}}>
+          </div>
+
+              </div>
+    )
+  })}
+ 
+
+      {/* <div onClick={goLeft} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-left"></i>
+    </div>
+    <div onClick={goRight} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",right:'0',backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-right"></i>
+    </div>  */}
+  </div>
+ 
+
+   <div style={{borderTop:"3px solid black",padding:'35px 0 0 20px'}}>
+<h1 style={{color:"#616161",margin:"0px",fontSize:"28px"}} className='work'>Stock Tracker</h1>
+<h1 className='work5'>Personal Finances Organizer </h1>
+<p className='poppins4' style={{marginTop:"15px",fontSize:"16px",color:"#444",fontWeight:"300"}}>NeverSurrender is a platform for the new ALS foundation mobile app in hopes to raise awareness and research funding to fight ALS. Pure JavaScript marketing site to promote the new ALS NeverSurrender app.</p>
+   
+<div style={{marginTop:"10px"}}>
+  <button className='btn learnmorework2' data-target='#modal11' style={{fontWeight:"bold"}}>
+    
+     VIEW SITE</button>
+
+  </div>
+   </div>
+ 
+ </div>
+</div>
+  
+ 
+<div id='modal15' 
+className='mask-rap'
+>
+<div className='mask' id='overlay4'>
+
+</div>
+<div className='modal1' style={{maxWidth:"700px",height:"680px"}}>
+  
+
+<div class="slider">
+  {sliderArray5.map((item,index)=>{
+    return(
+      <div class="slide" style={{transform:`translateX(${this.state.x5}%)`}} >
+
+       <div style={{width:"100%",height:"100%",backgroundImage:`url(${item.image})`,backgroundSize:"cover",backgroundPosition:"center"}}>
+          </div>
+
+              </div>
+    )
+  })}
+ 
+
+      {/* <div onClick={goLeft} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-left"></i>
+    </div>
+    <div onClick={goRight} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",right:'0',backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-right"></i>
+    </div>  */}
+  </div>
+ 
+
+   <div style={{borderTop:"3px solid black",padding:'35px 0 0 20px'}}>
+<h1 style={{color:"#616161",margin:"0px",fontSize:"28px"}} className='work'>Stock Tracker</h1>
+<h1 className='work5'>Personal Finances Organizer </h1>
+<p className='poppins4' style={{marginTop:"15px",fontSize:"16px",color:"#444",fontWeight:"300"}}>NeverSurrender is a platform for the new ALS foundation mobile app in hopes to raise awareness and research funding to fight ALS. Pure JavaScript marketing site to promote the new ALS NeverSurrender app.</p>
+<div style={{marginTop:"10px"}}>
+  <button className='btn learnmorework2' data-target='#modal11' style={{fontWeight:"bold"}}>
+    
+     VIEW SITE</button>
+
+  </div>
+   
+   </div>
+ 
+ </div>
+</div>
+  
+ 
+<div id='modal16' 
+className='mask-rap'
+>
+<div className='mask' id='overlay5'>
+
+</div>
+<div className='modal1' style={{maxWidth:"700px",height:"680px"}}>
+  
+
+<div class="slider">
+  {sliderArray6.map((item,index)=>{
+    return(
+      <div class="slide" style={{transform:`translateX(${this.state.x6}%)`}} >
+
+       <div style={{width:"100%",height:"100%",backgroundImage:`url(${item.image})`,backgroundSize:"cover",backgroundPosition:"center"}}>
+          </div>
+
+              </div>
+    )
+  })}
+ 
+
+      {/* <div onClick={goLeft} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-left"></i>
+    </div>
+    <div onClick={goRight} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",right:'0',backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-right"></i>
+    </div>  */}
+  </div>
+ 
+
+   <div style={{borderTop:"3px solid black",padding:'35px 0 0 20px'}}>
+<h1 style={{color:"#616161",margin:"0px",fontSize:"28px"}} className='work'>Stock Tracker</h1>
+<h1 className='work5'>Personal Finances Organizer </h1>
+<p className='poppins4' style={{marginTop:"15px",fontSize:"16px",color:"#444",fontWeight:"300"}}>NeverSurrender is a platform for the new ALS foundation mobile app in hopes to raise awareness and research funding to fight ALS. Pure JavaScript marketing site to promote the new ALS NeverSurrender app.</p>
+<div style={{marginTop:"10px"}}>
+  <button className='btn learnmorework2' data-target='#modal11' style={{fontWeight:"bold"}}>
+    
+     VIEW SITE</button>
+
+  </div>
+   </div>
+ 
+ </div>
+</div>
+  
+ 
+<div id='modal17' 
+className='mask-rap'
+>
+<div className='mask' id='overlay6'>
+
+</div>
+<div className='modal1' style={{maxWidth:"700px",height:"680px"}}>
+  
+
+<div class="slider">
+  {sliderArray7.map((item,index)=>{
+    return(
+      <div class="slide" style={{transform:`translateX(${this.state.x7}%)`}} >
+
+       <div style={{width:"100%",height:"100%",backgroundImage:`url(${item.image})`,backgroundSize:"cover",backgroundPosition:"center"}}>
+          </div>
+
+              </div>
+    )
+  })}
+ 
+
+      {/* <div onClick={goLeft} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-left"></i>
+    </div>
+    <div onClick={goRight} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",right:'0',backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-right"></i>
+    </div>  */}
+  </div>
+ 
+
+   <div style={{borderTop:"3px solid black",padding:'35px 0 0 20px'}}>
+<h1 style={{color:"#616161",margin:"0px",fontSize:"28px"}} className='work'>Stock Tracker</h1>
+<h1 className='work5'>Personal Finances Organizer </h1>
+<p className='poppins4' style={{marginTop:"15px",fontSize:"16px",color:"#444",fontWeight:"300"}}>NeverSurrender is a platform for the new ALS foundation mobile app in hopes to raise awareness and research funding to fight ALS. Pure JavaScript marketing site to promote the new ALS NeverSurrender app.</p>
+   
+<div style={{marginTop:"10px"}}>
+  <button className='btn learnmorework2' data-target='#modal11' style={{fontWeight:"bold"}}>
+    
+     VIEW SITE</button>
+
+  </div>
+   </div>
+ 
+ </div>
+</div>
+  
+ 
+<div id='modal18' 
+className='mask-rap'
+>
+<div className='mask' id='overlay7'>
+
+</div>
+<div className='modal1' style={{maxWidth:"700px",height:"680px"}}>
+  
+
+<div class="slider">
+  {sliderArray8.map((item,index)=>{
+    return(
+      <div class="slide" style={{transform:`translateX(${this.state.x8}%)`}} >
+
+       <div style={{width:"100%",height:"100%",backgroundImage:`url(${item.image})`,backgroundSize:"cover",backgroundPosition:"bottom"}}>
+          </div>
+
+              </div>
+    )
+  })}
+ 
+
+      {/* <div onClick={goLeft} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-left"></i>
+    </div>
+    <div onClick={goRight} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",right:'0',backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-right"></i>
+    </div>  */}
+  </div>
+ 
+
+   <div style={{borderTop:"3px solid black",padding:'35px 0 0 20px'}}>
+<h1 style={{color:"#616161",margin:"0px",fontSize:"28px"}} className='work'>Stock Tracker</h1>
+<h1 className='work5'>Personal Finances Organizer </h1>
+<p className='poppins4' style={{marginTop:"15px",fontSize:"16px",color:"#444",fontWeight:"300"}}>NeverSurrender is a platform for the new ALS foundation mobile app in hopes to raise awareness and research funding to fight ALS. Pure JavaScript marketing site to promote the new ALS NeverSurrender app.</p>
+<div style={{marginTop:"10px"}}>
+
+
+  <button className='btn learnmorework2' data-target='#modal11' style={{fontWeight:"bold"}}>
+    
+     VIEW SITE</button>
+
+  </div>
+   </div>
+ 
+ </div>
+</div>
+  
+ 
+<div id='modal19' 
+className='mask-rap'
+>
+<div className='mask' id='overlay8'>
+
+</div>
+<div className='modal1' style={{maxWidth:"700px",height:"680px"}}>
+  
+
+<div class="slider">
+  {sliderArray9.map((item,index)=>{
+    return(
+      <div class="slide" style={{transform:`translateX(${this.state.x9}%)`}} >
+
+       <div style={{width:"100%",height:"100%",backgroundImage:`url(${item.image})`,backgroundSize:"cover",backgroundPosition:"center"}}>
+          </div>
+
+              </div>
+    )
+  })}
+ 
+
+      {/* <div onClick={goLeft} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-left"></i>
+    </div>
+    <div onClick={goRight} style={{position:'absolute',bottom:'0',color:"white",padding:"15px 30px 15px 30px",right:'0',backgroundColor:"rgba(0,0,0,.4)"}}>
+    <i style={{fontSize:"20px"}} class="fas fa-chevron-right"></i>
+    </div>  */}
+  </div>
+ 
+
+   <div style={{borderTop:"3px solid black",padding:'35px 0 0 20px'}}>
+<h1 style={{color:"#616161",margin:"0px",fontSize:"28px"}} className='work'>Stock Tracker</h1>
+<h1 className='work5'>Personal Finances Organizer </h1>
+<p className='poppins4' style={{marginTop:"15px",fontSize:"16px",color:"#444",fontWeight:"300"}}>NeverSurrender is a platform for the new ALS foundation mobile app in hopes to raise awareness and research funding to fight ALS. Pure JavaScript marketing site to promote the new ALS NeverSurrender app.</p>
+   </div>
+ 
+ </div>
+</div>
+  
+ 
+ 
+<div>
+
+  
+</div>      
+
+
+ 
 
         <div className="background" id='back'>
-        <div className="info">
+        <div className="info" id={this.state.topElemenent}>
           <Container fluid>
             <Grid divided="vertically">
               <Grid.Row columns={2}>
@@ -270,8 +859,13 @@ export default class Home extends Component {
           </Container>
         </div>
        </div>
-       <Nav id='nav' />
- 
+       <Nav id='nav' topEl={this.state.topElemenent} contactEl={this.state.contactElemenent} aboutEl = {this.state.aboutElemenent} portfolioEl = {this.state.portfolioElemenent} />
+  
+
+   
+
+   
+     
       <div style={{ backgroundColor: '#f9f9f9', padding: '59px 0 100px 0' }}>
         <Container className="bioo">
          
@@ -294,6 +888,8 @@ export default class Home extends Component {
 
        
           </div>
+
+  
 
          <div style={{height:"365px"}}>
          <Grid divided="vertically">
@@ -353,21 +949,25 @@ export default class Home extends Component {
                     </div>
                     <div id='icontext-4' style={{marginTop:"45px"}}>
                  <h2 className='poppins' style={{margin:"0px 0 0 0",color:"#616161"}}>Dynamic</h2>
-<p className='poppins' style={{margin:"5px 0 0 0",color:"#616161",lineHeight:'1.5',fontSize:"15px",fontWeight:"300"}}>Websites don't have to be static, I love making pages come to life.</p>
+<p className='poppins' id={this.state.aboutElemenent}  style={{margin:"5px 0 0 0",color:"#616161",lineHeight:'1.5',fontSize:"15px",fontWeight:"300"}}>Websites don't have to be static, I love making pages come to life.</p>
                  </div>
                 </Grid.Column>
              
               </Grid.Row>
             </Grid>         </div>
 
-            </Container>
 
-          <Grid>
+        
+
+            </Container>
+ 
+          <Grid   >
             <Grid.Column width={8} style={{ padding: '0px 0 0 0' }}>
  
 
-            <div style={{display:"flex",justifyContent:"center"}}>
+            <div  style={{display:"flex",justifyContent:"center"}}>
   <Image
+
               
                 src={pic}
                 id='image'
@@ -382,7 +982,7 @@ export default class Home extends Component {
     <div    
     id='whoami'             
  style={{margin:"20px 0 0 40px"}}>
-             <h2 className='work' style={{color:"grey",margin:"0px 0 5px 0"}}>Who Am I?</h2>
+             <h2 className='work'   style={{color:"grey",margin:"0px 0 5px 0"}}>Who Am I?</h2>
 
              <div                
  style={{marginLeft:"100px",marginRight:"100px"}} >
@@ -644,18 +1244,20 @@ export default class Home extends Component {
                       style={{ fontSize: '5.5rem', color: 'white' }}
                       className="About-icon fab fa-node"
                     ></i>
-                    <p className="descrip" style={{ color: 'white' }}>
+                    <p   className="descrip" style={{ color: 'white' }}>
                       Node.js
                     </p>
                   </div>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
-          </Container>
+           </Container>
+ 
         </Segment>
+        <div id={this.state.portfolioElemenent}>hello</div>
+
       </div>
-     
-    <div style={{backgroundColor:"#9d72c8"}}>
+     <div style={{backgroundColor:"#9d72c8"}}>
    
      
       <br></br>
@@ -665,7 +1267,7 @@ export default class Home extends Component {
     
    
     
-      <Container  text>
+      <Container    text>
      
 
        <h2
@@ -684,17 +1286,32 @@ export default class Home extends Component {
 
       <div style={{height:"150px",margin:"0px 0 0 0",display:"flex",justifyContent:"center",backgroundColor:"#f9f9f9"}}>
 <div style={{display:"flex",justifyContent:'space-evenly',width:"70%",paddingTop:"55px"}}>
- <div className='push'  onClick={()=>{
+ 
+ <div className={`push`}  
+ onClick={()=>{
   this.setState({all:'all'})
-}}   style={{backgroundColor:this.state.all == 'all'? "#8b5eb4" : null ,width:"100%",height:"30%",display:"flex",alignItems:"center",justifyContent:"center",margin:"5px"}}><p style={{color:this.state.all == 'all'? "white" : '#616161',fontSize:"20px",fontWeight:"500"}}>ALL</p> </div>
-<div className='push' onClick={()=>{
-  this.setState({all:'node'})
-}}   style={{width:"100%",backgroundColor:this.state.all == 'node'? "#8b5eb4" : null,height:"30%",display:"flex",alignItems:"center",justifyContent:"center",margin:"5px"}}><p style={{color:this.state.all == 'node'? "white" : '#616161',fontSize:"20px",fontWeight:"500"}}>NODE-JS/EXPRESS</p></div>
+}}   
 
-<div className='push' onClick={()=>{
+style={{backgroundColor:this.state.all == 'all'? "#8b5eb4" : null ,width:"100%",height:"30%",display:"flex",
+alignItems:"center",justifyContent:"center",margin:"5px",
+}}><p style={{color:this.state.all == 'all'? "white" : '#616161',fontSize:"20px",fontWeight:"500"}}>ALL</p> </div>
+
+<div className={`push`} 
+onClick={()=>{
+  this.setState({all:'node'})
+}}   
+
+style={{width:"100%",backgroundColor:this.state.all == 'node'? "#8b5eb4" : null,height:"30%",display:"flex",alignItems:"center",justifyContent:"center",margin:"5px"}}><p style={{color:this.state.all == 'node'? "white" : '#616161',fontSize:"20px",fontWeight:"500"}}>NODE-JS/EXPRESS</p></div>
+
+<div className={`push`} 
+onClick={()=>{
   this.setState({all:'react'})
-}}    style={{width:"100%",height:"30%",display:"flex",backgroundColor:this.state.all == 'react'? "#8b5eb4" : null,alignItems:"center",justifyContent:"center",margin:"5px"}}> <p style={{color:this.state.all == 'react'? "white" : '#616161',fontSize:"20px",fontWeight:"500"}}>MERN/SQL </p> </div>
-<div className='push' onClick={()=>{
+}}    
+
+style={{width:"100%",height:"30%",display:"flex",backgroundColor:this.state.all == 'react'? "#8b5eb4" : null,alignItems:"center",justifyContent:"center",margin:"5px"}}> <p style={{color:this.state.all == 'react'? "white" : '#616161',fontSize:"20px",fontWeight:"500"}}>MERN/SQL </p> </div>
+
+<div className={`push`} 
+onClick={()=>{
   this.setState({all:'js'})
 }}    style={{width:"100%",height:"30%",display:"flex",alignItems:"center",justifyContent:"center",margin:"5px",backgroundColor:this.state.all == 'js'? "#8b5eb4" : null}}><p style={{color:this.state.all == 'js'? "white" : '#616161',fontSize:"20px",fontWeight:"500"}}>JAVASCRIPT </p> </div>
 
@@ -708,342 +1325,306 @@ export default class Home extends Component {
       </div>
 
       
+ 
+      <Segment style={{ padding: '0em 0 6em 0em',backgroundColor:"#f9f9f9" }} vertical>
+        
+            <div className={`image-container ${this.state.all == 'all'? 'transitioneffect' : this.state.all == 'react'? 'transitioneffect2'
+            : this.state.all == 'js'? 'transitioneffect3':this.state.all =='node'? 'transitioneffect1' : null}`}  >
+            
+
+ 
+
+
+<div className={`${this.state.all == 'all'||this.state.all == 'react'? 'activediv' : 'inactivediv'}` }>
+
+ 
+<div className='yellow' >
+ <div className='page'>
+
+ 
   
+<div className='cardcontent1' >
+<h2 className='work' style={{margin:"0px"}}>Stock Tracker </h2>
+<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>React Js / Node Js / MongoDB</p>
+</div>
+
+
+<div className='cardcontent'>
+ 
+<button className='btn learnmorework' data-target='#modal11' style={{fontWeight:"300"}}>LEARN MORE</button>
+</div>
+</div>
+</div>
+ 
+            
+            </div>
+   
+ <div className={`${this.state.all == 'all'||this.state.all == 'react'? 'activediv' : 'inactivediv'}`}>
 
    
-<div className={`${this.state.all == 'all' ? 'transitioneffect' : this.state.all == 'js' ? 'transitioneffect3' : this.state.all == 'react' || this.state.all == 'node' ? 'transitioneffect2':null}`} style={{display:"flex",justifyContent:'center',flexWrap:"wrap"}}>
- 
- <div className={`${this.state.all == 'all'||this.state.all == 'react'? 'activediv' : 'inactivediv'}` }>
- 
- 
- <div className='manage'>
-        <div className='yellow'>
-          <div className='page'>
-          <div className='cardcontent1' >
- <h2 className='work' style={{margin:"0px"}}>Stock Tracker </h2>
- <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>React Js / Node Js / MongoDB</p>
- </div>
- 
- 
- <div className='cardcontent'>
-  
- <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
- </div>
- 
- 
-          </div>
- <div>
-   
- </div>
-        </div>
-  
- 
-        </div>
-    
-             
-             </div>
- 
- 
- 
-            
-             <div className={`${this.state.all == 'all'||this.state.all == 'react'? 'activediv' : 'inactivediv'}`}>
- 
-   
-             <div className='manage'>
-        <div className='yellow1'>
-          <div className='page'>
-          <div className='cardcontent1' >
- <h2 className='work' style={{margin:"0px"}}>Learning Made Eazy </h2>
- <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>React Js / Node Js / MongoDB</p>
- </div>
- 
- 
- <div className='cardcontent'>
-  
- <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
- </div>
- 
- 
-          </div>
- <div>
-   
- </div>
-        </div>
+<div className='yellow1' >
+ <div className='page'>
+
  
   
+<div className='cardcontent1' >
+<h2 className='work' style={{margin:"0px"}}>Learning Made Eazy </h2>
+<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>React Js / Node Js / MongoDB</p>
+</div>
+
+
+<div className='cardcontent'>
  
-        </div>
-    
-           
-             </div>  
- 
- 
- 
- 
- 
- 
- 
- 
-             <div className={`${this.state.all == 'all'||this.state.all == 'react'? 'activediv' : 'inactivediv'}`}>
- 
-       
- 
-             <div className='manage'>
-        <div className='yellow2'>
-          <div className='page'>
-          <div className='cardcontent1' >
- <h2 className='work' style={{margin:"0px"}}>Star Wars Personality Quiz </h2>
- <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>React Js / Node Js / SQL</p>
- </div>
- 
- 
- <div className='cardcontent'>
-  
- <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
- </div>
- 
- 
-          </div>
- <div>
-   
- </div>
-        </div>
-    
-        </div>
-    
- </div>
-           
-             <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='js'? 'activedivjs': 'inactivediv'}`}>
- 
-             <div className='manage'>
-        <div className='yellow3'>
-          <div className='page'>
-          <div className='cardcontent1' >
- <h2 className='work' style={{margin:"0px"}}>Weather Dashboard </h2>
- <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML / CSS / Javascript</p>
- </div>
- 
- 
- <div className='cardcontent'>
-  
- <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
- </div>
- 
- 
-          </div>
- <div>
-   
- </div>
-        </div>
-      
-        </div>
-    
-         </div>
+<button className='btn learnmorework' data-target='#modal12' style={{fontWeight:"300"}}>LEARN MORE</button>
+</div>
+</div>
+</div>
+
+
           
+            </div>  
+
+ <div className={`${this.state.all == 'all'||this.state.all == 'react'? 'activediv' : 'inactivediv'}`}>
+
     
-              <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='node'? 'node1active' : 'inactivediv'}`}>
- 
-   
-              <div className='manage'>
-        <div className='yellow4'>
-          <div className='page'>
-          <div className='cardcontent1' >
- <h2 className='work' style={{margin:"0px"}}>Employee Directory CLI </h2>
- <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>Node Js</p>
- </div>
- 
- 
- <div className='cardcontent'>
-  
- <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
- </div>
- 
- 
-          </div>
- <div>
-   
- </div>
-        </div>
- 
-        
-        </div>
-    
-     </div>
- 
-         <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='js'? 'activedivjs2': 'inactivediv'}`}>
+<div className='yellow2' >
+ <div className='page'>
+
  
   
-         <div className='manage'>
-        <div className='yellow5'>
-          <div className='page'>
-          <div className='cardcontent1' >
- <h2 className='work' style={{margin:"0px"}}>NoteBook </h2>
- <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML / CSS / Javascript</p>
- </div>
+<div className='cardcontent1' >
+<h2 className='work' style={{margin:"0px"}}>Star Wars Personality Quiz </h2>
+<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>React Js / Node Js / SQL</p>
+</div>
+
+
+<div className='cardcontent'>
  
+<button className='btn learnmorework' data-target='#modal13' style={{fontWeight:"300"}}>LEARN MORE</button>
+</div>
+</div>
+</div>
+
+
+</div>
+          
+<div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='js'? 'activedivjs': 'inactivediv'}`}>
+
+<div className='yellow3' >
+ <div className='page'>
+
+<div className='cardcontent1' >
+<h2 className='work' style={{margin:"0px"}}>Weather Dashboard </h2>
+<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML & CSS / Jquery / Javascript</p>
+</div>
+
+
+<div className='cardcontent'>
  
- <div className='cardcontent'>
+<button className='btn learnmorework' data-target='#modal14' style={{fontWeight:"300"}}>LEARN MORE</button>
+</div>
+</div>
+</div>
   
- <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
- </div>
- 
- 
-          </div>
- <div>
    
- </div>
         </div>
-        
-        </div>
-    
-           </div>  
+         
+   
+             <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='node'? 'node1active' : 'inactivediv'}`}>
+
       
-      
-           <div className={`${this.state.all == 'all'? 'activediv' : this.state.all=='js'? 'activedivjs3': 'inactivediv'}`}>
+<div className='yellow4' >
+ <div className='page'>
+
  
-   
-           <div className='manage'>
-        <div className='yellow6'>
-          <div className='page'>
-          <div className='cardcontent1' >
- <h2 className='work' style={{margin:"0px"}}>Quiz App </h2>
- <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML / CSS / Javascript</p>
- </div>
- 
- 
- <div className='cardcontent'>
   
- <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
- </div>
+<div className='cardcontent1' >
+<h2 className='work' style={{margin:"0px"}}>Employee Directory CLI </h2>
+<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>Node Js</p>
+</div>
+
+
+<div className='cardcontent'>
  
- 
-          </div>
- <div>
-   
- </div>
-   
-        </div>
- 
-        
-        </div>
-    
-         </div>
-     
-     
-         <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='node'? 'node1active2' : 'inactivediv'}`}>
- 
-      
+<button className='btn learnmorework' data-target='#modal15' style={{fontWeight:"300"}}>LEARN MORE</button>
+</div>
+</div>
+</div>
   
-         <div className='manage'>
-        <div className='yellow7'>
-          <div className='page'>
-          <div className='cardcontent1' >
- <h2 className='work' style={{margin:"0px"}}>Github Profile Creator </h2>
- <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>React Js/Node Js/MongoDB</p>
- </div>
- 
- 
- <div className='cardcontent'>
-  
- <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
- </div>
- 
- 
-          </div>
- <div>
    
- </div>
-        </div>
-     
-        </div>
-    
-   
-   
+
     </div>
-    
-    
-    
-    <div className={`${this.state.all == 'all'? 'activediv' :this.state.all =='js'? 'activedivjs4': 'inactivediv'}`}>
- 
- 
-    <div className={`manage`}>
-        <div className='yellow8'>
-          <div className='page'>
-          <div className='cardcontent1' >
- <h2 className='work' style={{margin:"0px"}}>Password Generator </h2>
- <p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML / CSS / Javascript</p>
- </div>
- 
- 
- <div className='cardcontent'>
-  
- <button className='learnmorework' style={{fontWeight:"300"}}>LEARN MORE</button>
- </div>
- 
- 
-          </div>
- <div>
+
+        <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='js'? 'activedivjs2': 'inactivediv'}`}>
+
    
- </div>
-        </div>
-      
+<div className='yellow5' >
+ <div className='page'>
+
+ 
+  
+<div className='cardcontent1' >
+<h2 className='work' style={{margin:"0px"}}>Notebook Reminder </h2>
+<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML & CSS / Jquery / Javascript</p>
+</div>
+
+
+<div className='cardcontent'>
+ 
+<button className='btn learnmorework' data-target='#modal16' style={{fontWeight:"300"}}>LEARN MORE</button>
+</div>
+</div>
+</div>
+  
+
+
+          </div>  
+     
+     
+          <div className={`${this.state.all == 'all'? 'activediv' : this.state.all=='js'? 'activedivjs3': 'inactivediv'}`}>
+
+   
+<div className='yellow6' >
+ <div className='page'>
+
+ 
+  
+<div className='cardcontent1' >
+<h2 className='work' style={{margin:"0px"}}>Quiz App </h2>
+<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML & CSS / Jquery / Javascript</p>
+</div>
+
+
+<div className='cardcontent'>
+ 
+<button className='btn learnmorework' data-target='#modal17' style={{fontWeight:"300"}}>LEARN MORE</button>
+</div>
+</div>
+</div>
+     
+
         </div>
     
- </div>
-            
-         
-         
-          </div>
+    
+        <div className={`${this.state.all == 'all'? 'activediv' : this.state.all =='node'? 'node1active2' : 'inactivediv'}`}>
+
+      
+<div className='yellow7' >
+ <div className='page'>
+
+ 
+  
+<div className='cardcontent1' >
+<h2 className='work' style={{margin:"0px"}}>Github Profile Creator </h2>
+<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML & CSS / Jquery / Javascript</p>
+</div>
+
+
+<div className='cardcontent'>
+ 
+<button className='btn learnmorework' data-target='#modal18' style={{fontWeight:"300"}}>LEARN MORE</button>
+</div>
+</div>
+</div>
      
-          
+  
+  
+  
+   </div>
+   
+   
+   
+   <div className={`${this.state.all == 'all'? 'activediv' :this.state.all =='js'? 'activedivjs4': 'inactivediv'}`}>
+
+    
+   <div className='yellow8' >
+ <div className='page'>
+
+ 
+  
+<div className='cardcontent1' >
+<h2 className='work' style={{margin:"0px"}}>Password Generator </h2>
+<p style={{margin:"5px 0 0 0",color:"#e31b6d",fontSize:"18px"}}>HTML & CSS / Jquery / Javascript</p>
+</div>
+
+
+<div className='cardcontent'>
+ 
+<button className='btn learnmorework' data-target='#modal19' style={{fontWeight:"300"}}>LEARN MORE</button>
+</div>
+</div>
+</div>
+  
+
+</div>
+           
+ 
+     
+        
+          </div>
+         
+ 
+
+         
+      </Segment>
+ 
+     
+ 
      
       <div className='contact-me'>
         <div style={{width:"100%",height:"100%",backgroundColor:"rgba(46,51,71,.88)"}}>
-        <Grid divided='vertically'>
-    <Grid.Row columns={2}>
-      <Grid.Column>
+         
+         <div style={{display:"flex"}}>
+           <div style={{width:"100%"}}></div>
+           <div style={{width:"100%"}}>
+             <h1 className='work' 
+             id={this.state.contactElemenent}
+             style={{textAlign:"left",color:"white",paddingTop:"70px"}}>Lets Make Something Special</h1>
+             <p className='work' style={{fontSize:"16px",textAlign:"left",color:"white",fontWeight:"300"}}>Have any Questions or just want to connect? Here is a 
+             <br></br>  form you can fill out</p>
+<div style={{textAlign:'left',flexDirection:"row",display:"flex",marginTop:"40px"}}>
+ <div style={{width:"34%",marginRight:'13px'}}>
+   <p  className='work' style={{fontSize:"16px",textAlign:"left",color:"white",fontWeight:"300"}}>Name</p>
+ <input className='form-input' style={{width:"100%"}}  type='text'></input>
 
-<img src={pngitem} style={{width:"500px",height:"500px",marginTop:"50px",opacity:.8}} />
+ </div>
+ <div style={{width:"34%"}}>
+ <p  className='work' style={{fontSize:"16px",textAlign:"left",color:"white",fontWeight:"300"}}>Email</p>
 
-      </Grid.Column>
-      <Grid.Column>
-   
-        <h2 className='work' style={{color:"white",textAlign:"left"}}>  Lets make something special</h2>
-      <p className='work' style={{fontWeight:"300",textAlign:"left",fontSize:"17px",color:"white"}}>Have a question? We’re here to help. Send us a message <br></br> and we’ll get be in touch.</p>
+ <input className='form-input' style={{width:"100%"}}  type='text'></input>
+
+ </div>
+</div>
+
+<div style={{textAlign:'left',width:"100%"}}>
+<p  className='work' style={{fontSize:"16px",textAlign:"left",color:"white",fontWeight:"300",marginTop:"15px"}}>Subject</p>
+
+<input className='form-input' style={{width:`70%`}}  type='text'></input>
  
-      <Grid divided='vertically'>
-    <Grid.Row columns={2}>
-      <Grid.Column>
-      <div style={{display:"flex",justifyContent:"flex-start",flexDirection:"column"}}>
-        <p className='work' style={{fontWeight:"300",fontSize:"17px",color:"white",textAlign:"left"}}>Name</p>
+</div>
+<div style={{textAlign:'left',width:"100%"}}>
+<p  className='work' style={{fontSize:"16px",textAlign:"left",color:"white",fontWeight:"300",marginTop:"15px"}}>Message</p>
 
-<input style={{borderTop:'none',borderLeft:"none",borderRight:"none",borderBottom:'1px solid white',backgroundColor:"transparent",outline:"none",width:"300px"}}/>  
-        </div>     </Grid.Column>
-      <Grid.Column>
-        <div style={{display:"flex",justifyContent:"flex-start",flexDirection:"column"}}>
-        <p className='work' style={{fontWeight:"300",fontSize:"17px",color:"white",textAlign:"left"}}>Email</p>
+<input className='form-input' style={{width:`70%`}}  type='text'></input>
+ 
+</div>
+<div style={{textAlign:"left",marginTop:"32px"}}>
+<button className='sendsomething'>Book Now</button>
 
-<input style={{borderTop:'none',borderLeft:"none",borderRight:"none",borderBottom:'1px solid white',backgroundColor:"transparent",outline:"none",width:"300px"}}/>  
-        </div>
-         </Grid.Column>
-    </Grid.Row>
-    </Grid>
-
-
+</div>
   
+           </div>
 
- 
-      
-      </Grid.Column>
-    </Grid.Row>
-    </Grid>
+         </div>
         </div>
       </div>
-   
-   
-   
+    
+    
+    
+    
     </div>
-    );
+    
+     );
   }
 }
 
