@@ -1251,11 +1251,12 @@ className='mask-rap'
                 </Grid.Column>
               </Grid.Row>
             </Grid>
+            <div id={this.state.portfolioElemenent} style={{marginTop:"90px"}} ></div>
+
            </Container>
  
         </Segment>
-        <div id={this.state.portfolioElemenent}>hello</div>
-
+ 
       </div>
      <div style={{backgroundColor:"#9d72c8"}}>
    
@@ -1326,7 +1327,7 @@ onClick={()=>{
 
       
  
-      <Segment style={{ padding: '0em 0 6em 0em',backgroundColor:"#f9f9f9" }} vertical>
+      <div style={{ padding: '0em 0 4em 0em',backgroundColor:"#f9f9f9" }} >
         
             <div className={`image-container ${this.state.all == 'all'? 'transitioneffect' : this.state.all == 'react'? 'transitioneffect2'
             : this.state.all == 'js'? 'transitioneffect3':this.state.all =='node'? 'transitioneffect1' : null}`}  >
@@ -1563,33 +1564,49 @@ onClick={()=>{
         
           </div>
          
- 
+          <div id={this.state.contactElemenent} style={{marginBottom:"50px"}}  > </div> 
 
-         
-      </Segment>
+
+       </div>
  
-     
  
-     
-      <div className='contact-me'>
-        <div style={{width:"100%",height:"100%",backgroundColor:"rgba(46,51,71,.88)"}}>
+ <div className='contact-me'>
+<div style={{height:"100%",width:"100%",backgroundColor:"rgba(0,0,0,.12)"}}>
+<div style={{display:"flex",justifyContent:"center",alignItems:"center",width:"100%",height:"100%"}}>
+  <h1 className='work'  style={{color:"white",fontSize:"50px"}}>Contact</h1>
+</div>
+</div>
+ </div>
+  
+        <div   style={{width:"100%",height:"100%",backgroundColor:"white",paddingTop:"30px"}}>
          
          <div style={{display:"flex"}}>
-           <div style={{width:"100%"}}></div>
-           <div style={{width:"100%"}}>
-             <h1 className='work' 
-             id={this.state.contactElemenent}
-             style={{textAlign:"left",color:"white",paddingTop:"70px"}}>Lets Make Something Special</h1>
-             <p className='work' style={{fontSize:"16px",textAlign:"left",color:"white",fontWeight:"300"}}>Have any Questions or just want to connect? Here is a 
-             <br></br>  form you can fill out</p>
-<div style={{textAlign:'left',flexDirection:"row",display:"flex",marginTop:"40px"}}>
- <div style={{width:"34%",marginRight:'13px'}}>
-   <p  className='work' style={{fontSize:"16px",textAlign:"left",color:"white",fontWeight:"300"}}>Name</p>
+           <div style={{width:"40%"}}>
+
+             <h2 style={{marginTop:"40px",textAlign:"left",marginLeft:"70px",fontSize:"28px",marginBottom:"28px"}} className='work'>Contact me</h2>
+             <p className='work' style={{fontWeight:"300",textAlign:"left",marginLeft:"70px",fontSize:"16px",lineHeight:"1.3",marginBottom:"0px",color:"#646363"}}>530 52n st. Oakland Ca</p>
+             <p className='work' style={{fontWeight:"300",textAlign:"left",marginLeft:"70px",fontSize:"16px",lineHeight:"1.3",marginBottom:"0px",color:"#646363"}}>USA, 94609</p>
+             <br></br>
+             <p className='work' style={{fontWeight:"300",textAlign:"left",marginLeft:"70px",fontSize:"16px",lineHeight:"1.3",marginBottom:"0px",color:"#646363"}}>(510)-452-7283</p>
+             <p className='work' style={{fontWeight:"300",textAlign:"left",marginLeft:"70px",fontSize:"16px",lineHeight:"1.3",marginBottom:"0px",color:"#646363"}}>fanuelnalem@outlook.com</p>
+
+<div style={{textAlign:"left",marginTop:"38px",marginLeft:"70px"}}>
+  <Icon name='facebook'size='large' style={{color:"#cfcfcf",marginRight:"9px"}} />
+  <Icon name='twitter' size='large' style={{color:"#cfcfcf",marginRight:"9px"}}  />
+  <Icon name='youtube' size='large' style={{color:"#cfcfcf"}}  />
+
+</div>
+           </div>
+           <div style={{width:"60%"}}>
+            
+<div style={{flexDirection:"row",display:"flex",marginTop:"40px"}}>
+ <div style={{width:"40%",marginRight:'13px'}}>
+   <p  className='work' style={{fontSize:"16px",textAlign:"left",color:"#adb7ba",fontWeight:"300"}}>Name</p>
  <input className='form-input' style={{width:"100%"}}  type='text'></input>
 
  </div>
- <div style={{width:"34%"}}>
- <p  className='work' style={{fontSize:"16px",textAlign:"left",color:"white",fontWeight:"300"}}>Email</p>
+ <div style={{width:"40%"}}>
+ <p  className='work' style={{fontSize:"16px",textAlign:"left",color:"#adb7ba",fontWeight:"300"}}>Email</p>
 
  <input className='form-input' style={{width:"100%"}}  type='text'></input>
 
@@ -1597,18 +1614,18 @@ onClick={()=>{
 </div>
 
 <div style={{textAlign:'left',width:"100%"}}>
-<p  className='work' style={{fontSize:"16px",textAlign:"left",color:"white",fontWeight:"300",marginTop:"15px"}}>Subject</p>
+<p  className='work' style={{fontSize:"16px",textAlign:"left",color:"#adb7ba",fontWeight:"300",marginTop:"15px"}}>Subject</p>
 
-<input className='form-input' style={{width:`70%`}}  type='text'></input>
+<input className='form-input' style={{width:`80%`}}  type='text'></input>
  
 </div>
 <div style={{textAlign:'left',width:"100%"}}>
-<p  className='work' style={{fontSize:"16px",textAlign:"left",color:"white",fontWeight:"300",marginTop:"15px"}}>Message</p>
+<p  className='work' style={{fontSize:"16px",textAlign:"left",color:"#adb7ba",fontWeight:"300",marginTop:"15px"}}>Message</p>
 
-<input className='form-input' style={{width:`70%`}}  type='text'></input>
+<input className='form-input' style={{width:`80%`}}  type='text'></input>
  
 </div>
-<div style={{textAlign:"left",marginTop:"32px"}}>
+<div style={{textAlign:"left",marginTop:"32px",marginBottom:"90px"}}>
 <button className='sendsomething'>Book Now</button>
 
 </div>
@@ -1617,8 +1634,7 @@ onClick={()=>{
 
          </div>
         </div>
-      </div>
-    
+     
     
     
     
