@@ -1569,7 +1569,7 @@ onClick={()=>{
 
        </div>
  
- 
+{/*  
  <div className='contact-me'>
 <div style={{height:"100%",width:"100%",backgroundColor:"rgba(0,0,0,.12)"}}>
 <div style={{display:"flex",justifyContent:"center",alignItems:"center",width:"100%",height:"100%"}}>
@@ -1635,7 +1635,7 @@ onClick={()=>{
          </div>
         </div>
      
-    
+     */}
     
     
     </div>
