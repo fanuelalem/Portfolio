@@ -1283,9 +1283,9 @@ className='mask-rap'
       <AosScroll />
 
       </div>
-<div style={{height:"60px",backgroundColor:"#9d72c8"}}></div>
+<div style={{height:"60px",backgroundColor:"#f5f5f5"}}></div>
 
-      <div style={{height:"150px",margin:"0px 0 0 0",display:"flex",justifyContent:"center",backgroundColor:"#f9f9f9"}}>
+      <div style={{height:"150px",margin:"0px 0 0 0",display:"flex",justifyContent:"center",backgroundColor:"#f5f5f5"}}>
 <div style={{display:"flex",justifyContent:'space-evenly',width:"70%",paddingTop:"55px"}}>
  
  <div className={`push`}  
@@ -1327,7 +1327,7 @@ onClick={()=>{
 
       
  
-      <div style={{ padding: '0em 0 4em 0em',backgroundColor:"#f9f9f9" }} >
+      <div style={{ padding: '0em 0 6em 0em',backgroundColor:"#f5f5f5" }} >
         
             <div className={`image-container ${this.state.all == 'all'? 'transitioneffect' : this.state.all == 'react'? 'transitioneffect2'
             : this.state.all == 'js'? 'transitioneffect3':this.state.all =='node'? 'transitioneffect1' : null}`}  >
