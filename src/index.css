@@ -245,11 +245,14 @@ body {
     font-size: 10pt;
     margin: 0 auto;
     padding: 10px 20px 10px 20px;
-    
-    color:white;
+     color:white;
      font-family: 'Raleway', sans-serif;
      background-color: #e31b6d;
     transition: all 0.3s ease-in-out
+  }
+  .learnmorework2:before{
+    content:\F3CC;
+
   }
   .learnmorework2:hover {
     background-color: WHITE;
@@ -302,7 +305,7 @@ body {
     width: 100%;
     flex-shrink: 0;
     height: 100%;
-    transition:.5s;
+    transition:1s;
    }
 
     #goLeft {
@@ -781,6 +784,26 @@ body {
             opacity: 600ms linear;
              transform:translate(-150px,-300px);
           }
+          .node1active2{
+            transition: all 600ms ease 0ms;
+            opacity: 600ms linear;
+             transform:translate(240px,-600px);
+          }
+
+          
+           
+
+          /* @media screen and (max-width: 1170px) {
+            
+            .node1active{
+                 transform:translate(50px,-600px);
+            }
+            .node1active2{
+                transform:translate(50px,-900px);
+             }
+          } */
+
+         
 
           .activedivjs2{
             transition: all 600ms ease 0ms;
@@ -792,11 +815,7 @@ body {
             opacity: 600ms linear;
              transform:translate(780px,-600px);
           }
-          .node1active2{
-            transition: all 600ms ease 0ms;
-            opacity: 600ms linear;
-             transform:translate(240px,-600px);
-          }
+           
           .activedivjs{
             transition: all 600ms ease 0ms;
             opacity: 600ms linear;
@@ -897,12 +916,9 @@ body {
    
   .logo {
     font-family: 'Roboto Mono', monospace;
-    font-size: 35px;
+    font-size: 38px;
   }
-  .contactmefooter {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-  }
+  
   .menufooter {
     font-family: 'Poppins', sans-serif;
     color: white;
@@ -925,6 +941,12 @@ body {
     height: 70vh;
     background-color: #9d72c8;
   }
+
+  .pointerclicker::before {
+    font-family: "Font Awesome 5 Brands"; 
+	font-weight: 400;
+	content: "\F3CC";
+}
   .sendmeamessage {
     background-color: #8b5eb4;
     border: none;
@@ -934,9 +956,15 @@ body {
     padding-left: 31px;
     padding-right: 31px;
     border-radius: 23px;
-    border: solid 1.7px black;
+    border: solid 1px black;
     cursor: pointer;
     outline: none;
+    transition: all 0.2s ease-in-out;
+
+  }
+  .sendmeamessage:hover {
+    border: 1px solid #9d71c7;
+    background-color: #9d71c7;
   }
   .animate {
     transform: translateX(0%) translateY(0%);
@@ -965,10 +993,7 @@ body {
   }
   
    
-  .sendmeamessage:hover {
-    border: 1px solid #9d71c7;
-    background-color: #9d71c7;
-  }
+   
   .sendmeamessage {
     font-family: 'Maven Pro', sans-serif;
   }
@@ -1220,6 +1245,51 @@ to{opacity: 1;}
     animation:fadeInLeft .6s both
   }
 
+  .gallaryfadeup {
+    animation:fadeInUp .6s both
+
+  }
+
+  .gallaryfadeup2{
+    animation:fadeInUp .6s both;
+    animation-delay: .1s;
+  }
+  .gallaryfadeup3{
+    animation:fadeInUp .6s both;
+    animation-delay: .2s;
+
+  }
+  .gallaryfadeup4{
+    animation:fadeInUp .6s both;
+    animation-delay: .3s;
+
+  }
+  .gallaryfadeup5{
+    animation:fadeInUp .6s both;
+    animation-delay: .4s;
+
+  }
+  .gallaryfadeup6{
+    animation:fadeInUp .6s both;
+    animation-delay: .5s;
+
+  }
+  .gallaryfadeup7{
+    animation:fadeInUp .6s both;
+    animation-delay: .6s;
+
+  }
+  .gallaryfadeup8{
+    animation:fadeInUp .6s both;
+    animation-delay: .7s;
+
+  }
+  .gallaryfadeup9{
+    animation:fadeInUp .6s both;
+    animation-delay: .8s;
+
+  }
+
   .fade-in-icon{
     animation:iconText .75s ease both
 
@@ -1408,6 +1478,18 @@ to{opacity: 1;}
     100%{
       opacity:1;
       transform:translateX(0px)
+
+    }
+  }
+
+  @keyframes fadeInUp{
+    0%{
+      opacity:0;
+      transform:translateY(200px)
+    }
+    100%{
+      opacity:1;
+      transform:translateY(0px)
 
     }
   }

@@ -18,12 +18,14 @@ import { Container, Icon, Grid } from 'semantic-ui-react';
       <Route exact path="/portfolio" component={Portfolio} />
  
       <div className="footerid" style={{ minHeight: '345px' }}>
+ 
+        
         <Grid columns={4}>
           <Grid.Row>
             <Grid.Column width={4}>
               <h2
                 className="logo"
-                style={{ padding: '55px 0 0 0', color: '#60aafb' }}
+                style={{ padding: '55px 0 0 0', color: '#d7d8da',fontWeight:"400" }}
               >
                 Fanuel Alem
               </h2>
@@ -31,33 +33,33 @@ import { Container, Icon, Grid } from 'semantic-ui-react';
             <Grid.Column width={4}>
               <div style={{ textAlign: 'left', marginLeft: '100px' }}>
                 <h3
-                  className="contactmefooter"
-                  style={{ padding: '70px 0 0 0', fontSize: '16px' }}
+                  className="work"
+                  style={{ padding: '70px 0 0 0', fontSize: '18px',color:"white" }}
                 >
                   Contact Me
                 </h3>
                 <br></br>
                 <h3
-                  className="contactmefooter"
-                  style={{ fontSize: '16px', margin: '0 0 4px 0' }}
+                  className="work"
+                  style={{ fontSize: '16px',fontWeight:"400",margin: '0 0 4px 0',color:"white" }}
                 >
                   (510) 452-7283
                 </h3>
                 <h3
-                  className="contactmefooter"
-                  style={{ fontSize: '16px', margin: '0 0 4px 0' }}
+                  className="work"
+                  style={{ fontSize: '16px',fontWeight:"400",margin: '0 0 4px 0',color:"white" }}
                 >
                   fanuelnalem@outlook.com
                 </h3>
                 <h3
-                  className="contactmefooter"
-                  style={{ fontSize: '16px', margin: '0 0 4px 0' }}
+                  className="work"
+                  style={{ fontSize: '16px',fontWeight:"400",margin: '0 0 4px 0',color:"white" }}
                 >
                   530 52nd st. Oakland
                 </h3>
                 <h3
-                  className="contactmefooter"
-                  style={{ fontSize: '16px', margin: '0 0 0 0' }}
+                  className="work"
+                  style={{ fontSize: '16px',fontWeight:"400",margin: '0 0 0 0',color:"white" }}
                 >
                   94609
                 </h3>
@@ -66,8 +68,8 @@ import { Container, Icon, Grid } from 'semantic-ui-react';
             <Grid.Column width={4}>
               <div style={{ textAlign: 'left', marginLeft: '100px' }}>
                 <h3
-                  className="contactmefooter"
-                  style={{ padding: '70px 0 0 0', fontSize: '16px' }}
+                  className="work"
+                  style={{ padding: '70px 0 0 0', fontSize: '18px',color:"white" }}
                 >
                   Social
                 </h3>
@@ -79,8 +81,8 @@ import { Container, Icon, Grid } from 'semantic-ui-react';
                   rel="noopener noreferrer"
                 >
                   <h3
-                    className="menufooter"
-                    style={{ fontSize: '16px', margin: '0 0 4px 0' }}
+                    className="work"
+                    style={{ fontSize: '16px', margin: '0 0 4px 0',fontWeight:"400",color:"white" }}
                   >
                     LinkedIn
                   </h3>
@@ -91,8 +93,8 @@ import { Container, Icon, Grid } from 'semantic-ui-react';
                   rel="noopener noreferrer"
                 >
                   <h3
-                    className="menufooter"
-                    style={{ fontSize: '16px', margin: '0 0 4px 0' }}
+                    className="work"
+                    style={{ fontSize: '16px', margin: '0 0 4px 0',fontWeight:"400",color:"white" }}
                   >
                     Github
                   </h3>
@@ -104,8 +106,8 @@ import { Container, Icon, Grid } from 'semantic-ui-react';
                   rel="noopener noreferrer"
                 >
                   <h3
-                    className="menufooter"
-                    style={{ fontSize: '16px', margin: '0 0 4px 0' }}
+                    className="work"
+                    style={{ fontSize: '16px', margin: '0 0 4px 0',fontWeight:"400",color:"white" }}
                   >
                     Portfolio
                   </h3>
@@ -114,19 +116,25 @@ import { Container, Icon, Grid } from 'semantic-ui-react';
             </Grid.Column>
             <Grid.Column width={4} style={{ padding: '70px 0 0 0' }}>
             
-              <div>
+              {/* <div>
                 <a
                   href="mailto:fanuelnalem@outlook.com"
                   style={{ color: '#60aafb', margin: '0 150px 0 0' }}
                 >
                   <Icon name="mail" size="big"></Icon>
                 </a>
+              </div> */}
+
+              <div style={{display:"flex",justifyContent:"flex-start"}}>
+                <Icon name='facebook' size='large' style={{marginRight:"5px",color:'#d7d8da'}} />
+                 <Icon name='twitter' size='large' style={{marginRight:"5px",color:'#d7d8da'}} />
+                <Icon name='youtube' size='large'  style={{color:"#d7d8da"}} />
               </div>
             </Grid.Column>
           </Grid.Row>
         </Grid>
-      </div>
-      <Container fluid>
+        </div>
+       <Container fluid>
         <p
           className="para"
           style={{
